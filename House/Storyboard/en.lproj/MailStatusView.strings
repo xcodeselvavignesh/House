@@ -1,0 +1,30 @@
+
+/* Class = "UILabel"; text = "Mail Status"; ObjectID = "Hxe-Ag-iwc"; */
+"Hxe-Ag-iwc.text" = "Mail Status . View";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Hzk-ay-c5y"; */
+"Hzk-ay-c5y.text" = "Label";
+
+/* Class = "UILabel"; text = "To :"; ObjectID = "Khb-qD-Yhx"; */
+"Khb-qD-Yhx.text" = "To :";
+
+/* Class = "UILabel"; text = "User Name :"; ObjectID = "LMY-ny-O3b"; */
+"LMY-ny-O3b.text" = "User Name :";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "SS0-eW-W9j"; */
+"SS0-eW-W9j.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "YrG-hN-NVe"; */
+"YrG-hN-NVe.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Yrg-wg-LsT"; */
+"Yrg-wg-LsT.text" = "Label";
+
+/* Class = "UILabel"; text = "Mail Content :"; ObjectID = "cT1-wQ-6Vf"; */
+"cT1-wQ-6Vf.text" = "Mail Content :";
+
+/* Class = "UILabel"; text = "Send Date Time :"; ObjectID = "v9Z-sR-rpU"; */
+"v9Z-sR-rpU.text" = "Send Date Time :";
+
+/* Class = "UILabel"; text = "Subject :"; ObjectID = "wUT-F7-Bxz"; */
+"wUT-F7-Bxz.text" = "Subject :";

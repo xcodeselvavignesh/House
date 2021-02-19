@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="168" id="KGk-i7-Jjw" customClass="MailStatusTableViewCell" customModule="House" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="333" height="168"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="333" height="168"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dl4-xr-uBA">
+                        <rect key="frame" x="0.0" y="0.0" width="333" height="25"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOw-F9-4uH">
+                                <rect key="frame" x="10" y="0.0" width="33" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.016595588997006416" green="0.19550821185112" blue="0.98952049016952515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pri-Po-sGL">
+                                <rect key="frame" x="284" y="4" width="37.5" height="18"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="Pri-Po-sGL" firstAttribute="leading" secondItem="WOw-F9-4uH" secondAttribute="trailing" constant="280" id="6Nb-IO-fXr"/>
+                            <constraint firstItem="Pri-Po-sGL" firstAttribute="firstBaseline" secondItem="WOw-F9-4uH" secondAttribute="firstBaseline" id="IgV-Ki-JP6"/>
+                            <constraint firstAttribute="bottom" secondItem="WOw-F9-4uH" secondAttribute="bottom" id="LD0-8M-8gE"/>
+                            <constraint firstItem="WOw-F9-4uH" firstAttribute="leading" secondItem="dl4-xr-uBA" secondAttribute="leading" constant="10" id="kDO-Zi-cUb"/>
+                            <constraint firstAttribute="trailing" secondItem="Pri-Po-sGL" secondAttribute="trailing" constant="10" id="l2e-IV-Gnq"/>
+                            <constraint firstItem="WOw-F9-4uH" firstAttribute="top" secondItem="dl4-xr-uBA" secondAttribute="top" id="qjI-fh-hmt"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kz3-Hx-uvy">
+                        <rect key="frame" x="0.0" y="30" width="333" height="138"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djv-fT-xT0">
+                                <rect key="frame" x="61.5" y="10" width="42.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" systemColor="systemBlueColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subject :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="850-zT-iGS">
+                                <rect key="frame" x="47" y="37" width="57" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SendDateTime :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovm-6B-IX5">
+                                <rect key="frame" x="2" y="91" width="102" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" systemColor="systemBlueColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMj-1L-NJz">
+                                <rect key="frame" x="109" y="37" width="214" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlU-aC-jIZ">
+                                <rect key="frame" x="109" y="64" width="214" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LfS-6O-Ftm">
+                                <rect key="frame" x="109" y="91" width="214" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MailSendBy :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0B-nc-eEa">
+                                <rect key="frame" x="20" y="64" width="84" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" systemColor="systemBlueColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOE-L0-6o4">
+                                <rect key="frame" x="109" y="10" width="214" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="m0B-nc-eEa" firstAttribute="leading" secondItem="Kz3-Hx-uvy" secondAttribute="leading" constant="20" id="2MR-pY-YEt"/>
+                            <constraint firstItem="TOE-L0-6o4" firstAttribute="firstBaseline" secondItem="djv-fT-xT0" secondAttribute="firstBaseline" id="2aj-7M-EtB"/>
+                            <constraint firstItem="tlU-aC-jIZ" firstAttribute="firstBaseline" secondItem="m0B-nc-eEa" secondAttribute="firstBaseline" id="34d-7j-TrD"/>
+                            <constraint firstItem="850-zT-iGS" firstAttribute="top" secondItem="djv-fT-xT0" secondAttribute="bottom" constant="10" id="3pX-YQ-igX"/>
+                            <constraint firstItem="m0B-nc-eEa" firstAttribute="trailing" secondItem="850-zT-iGS" secondAttribute="trailing" id="5Kw-KT-Yvs"/>
+                            <constraint firstItem="tlU-aC-jIZ" firstAttribute="leading" secondItem="TOE-L0-6o4" secondAttribute="leading" id="6sM-rz-XCA"/>
+                            <constraint firstItem="ovm-6B-IX5" firstAttribute="trailing" secondItem="850-zT-iGS" secondAttribute="trailing" id="JtP-Gh-rl4"/>
+                            <constraint firstItem="tlU-aC-jIZ" firstAttribute="trailing" secondItem="TOE-L0-6o4" secondAttribute="trailing" id="NuX-By-5tg"/>
+                            <constraint firstAttribute="trailing" secondItem="TOE-L0-6o4" secondAttribute="trailing" constant="10" id="PM0-sv-P3x"/>
+                            <constraint firstItem="eMj-1L-NJz" firstAttribute="firstBaseline" secondItem="850-zT-iGS" secondAttribute="firstBaseline" id="RDA-bx-H44"/>
+                            <constraint firstItem="LfS-6O-Ftm" firstAttribute="trailing" secondItem="TOE-L0-6o4" secondAttribute="trailing" id="SHw-AW-4MT"/>
+                            <constraint firstItem="ovm-6B-IX5" firstAttribute="top" secondItem="m0B-nc-eEa" secondAttribute="bottom" constant="10" id="XRp-cd-eya"/>
+                            <constraint firstItem="LfS-6O-Ftm" firstAttribute="leading" secondItem="TOE-L0-6o4" secondAttribute="leading" id="Xgz-ct-zLR"/>
+                            <constraint firstItem="LfS-6O-Ftm" firstAttribute="firstBaseline" secondItem="ovm-6B-IX5" secondAttribute="firstBaseline" id="Zsp-5m-PDo"/>
+                            <constraint firstItem="djv-fT-xT0" firstAttribute="trailing" secondItem="850-zT-iGS" secondAttribute="trailing" id="iSh-d5-5Bz"/>
+                            <constraint firstItem="LfS-6O-Ftm" firstAttribute="leading" secondItem="ovm-6B-IX5" secondAttribute="trailing" constant="5" id="kcd-mg-36U"/>
+                            <constraint firstItem="djv-fT-xT0" firstAttribute="top" secondItem="Kz3-Hx-uvy" secondAttribute="top" constant="10" id="mmT-9r-ihM"/>
+                            <constraint firstItem="eMj-1L-NJz" firstAttribute="trailing" secondItem="TOE-L0-6o4" secondAttribute="trailing" id="odH-OV-JkR"/>
+                            <constraint firstItem="TOE-L0-6o4" firstAttribute="leading" secondItem="djv-fT-xT0" secondAttribute="trailing" constant="5" id="pio-rM-lXO"/>
+                            <constraint firstItem="djv-fT-xT0" firstAttribute="top" secondItem="Kz3-Hx-uvy" secondAttribute="top" constant="10" id="wuN-qG-nnm"/>
+                            <constraint firstItem="m0B-nc-eEa" firstAttribute="top" secondItem="850-zT-iGS" secondAttribute="bottom" constant="10" id="xY9-We-eXx"/>
+                            <constraint firstItem="LfS-6O-Ftm" firstAttribute="leading" secondItem="ovm-6B-IX5" secondAttribute="trailing" constant="5" id="yvt-aR-NAi"/>
+                            <constraint firstItem="eMj-1L-NJz" firstAttribute="leading" secondItem="TOE-L0-6o4" secondAttribute="leading" id="z3j-c9-JBe"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Kz3-Hx-uvy" secondAttribute="bottom" id="0NG-CR-Uvy"/>
+                    <constraint firstItem="Kz3-Hx-uvy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="1Ns-jH-TSJ"/>
+                    <constraint firstItem="dl4-xr-uBA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="FwE-Ku-DBt"/>
+                    <constraint firstAttribute="trailing" secondItem="dl4-xr-uBA" secondAttribute="trailing" id="GIh-dq-G8K"/>
+                    <constraint firstItem="dl4-xr-uBA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="eB2-eu-Nsf"/>
+                    <constraint firstItem="Kz3-Hx-uvy" firstAttribute="top" secondItem="dl4-xr-uBA" secondAttribute="bottom" id="f4X-7Y-iE1"/>
+                    <constraint firstAttribute="trailing" secondItem="Kz3-Hx-uvy" secondAttribute="trailing" id="rF5-Yk-nFN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="mailEmail" destination="TOE-L0-6o4" id="etG-2W-Zdu"/>
+                <outlet property="mailSendBy" destination="tlU-aC-jIZ" id="DUJ-Zl-GE0"/>
+                <outlet property="mailSendDateTime" destination="LfS-6O-Ftm" id="bPY-xd-eDh"/>
+                <outlet property="mailStatusCount" destination="Pri-Po-sGL" id="tKs-Bu-nl5"/>
+                <outlet property="mailStatusUserName" destination="WOw-F9-4uH" id="t43-H2-6Ls"/>
+                <outlet property="mailSubject" destination="eMj-1L-NJz" id="Y3e-Oc-Npl"/>
+            </connections>
+            <point key="canvasLocation" x="-21.014492753623191" y="88.392857142857139"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

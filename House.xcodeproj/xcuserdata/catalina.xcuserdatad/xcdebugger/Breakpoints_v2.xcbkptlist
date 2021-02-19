@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "BD728085-75D4-4FC0-A7FB-01F85A65B26C"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "62FDB09B-6EDE-483E-9B41-3836867C9B2C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "House/Controller/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "loginProcess(_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "075C1878-BCA1-4B47-A1E6-684FC8AF71D8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "House/Controller/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "loginProcess(_:_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "075C1878-BCA1-4B47-A1E6-684FC8AF71D8 - b3d69c2a976124d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "House.ViewController.loginProcess(Swift.String, Swift.String) -&gt; ()"
+                  moduleName = "House"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/catalina/Documents/House/House/Controller/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "119"
+                  endingLineNumber = "119"
+                  offsetFromSymbolStart = "1500">
+               </Location>
+               <Location
+                  uuid = "075C1878-BCA1-4B47-A1E6-684FC8AF71D8 - 5ba1301090ef153c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.NSDictionary) -&gt; () in House.ViewController.loginProcess(Swift.String, Swift.String) -&gt; ()"
+                  moduleName = "House"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/catalina/Documents/House/House/Controller/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "120"
+                  endingLineNumber = "120"
+                  offsetFromSymbolStart = "198">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

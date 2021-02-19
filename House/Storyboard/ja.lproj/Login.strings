@@ -1,0 +1,36 @@
+
+/* Class = "UIButton"; normalTitle = "RegisterNow"; ObjectID = "6cV-gk-N2L"; */
+"6cV-gk-N2L.normalTitle" = "今すぐ登録";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "E23-VD-Zby"; */
+"E23-VD-Zby.normalTitle" = "ログイン";
+
+/* Class = "UIButton"; normalTitle = "Forgot your password?"; ObjectID = "Eol-H9-hgv"; */
+"Eol-H9-hgv.normalTitle" = "パスワードを忘れた場合";
+
+/* Class = "UILabel"; text = "Login"; ObjectID = "FF3-tf-l9U"; */
+"FF3-tf-l9U.text" = "ログイン";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "GVu-4g-s4G"; */
+"GVu-4g-s4G.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "PnB-fT-9xn"; */
+"PnB-fT-9xn.text" = "Label";
+
+/* Class = "UILabel"; text = "Remember me"; ObjectID = "TGK-e1-5A9"; */
+"TGK-e1-5A9.text" = "覚えておいてください";
+
+/* Class = "UITextField"; placeholder = "Email / User Id"; ObjectID = "TXH-DZ-4oB"; */
+"TXH-DZ-4oB.placeholder" = "メールアドレスまたは電話番号:";
+
+/* Class = "UILabel"; text = "Credentials does not match"; ObjectID = "dsJ-li-ee0"; */
+"dsJ-li-ee0.text" = "Credentials does not match";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "nJX-tr-84V"; */
+"nJX-tr-84V.text" = "Label";
+
+/* Class = "UILabel"; text = "Not a member yet?"; ObjectID = "pgK-RU-kko"; */
+"pgK-RU-kko.text" = "まだメンバーではありませんか";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "yGf-wJ-1cB"; */
+"yGf-wJ-1cB.placeholder" = "パスワード";

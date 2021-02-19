@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--House View Controller-->
+        <scene sceneID="HFs-UM-Fyc">
+            <objects>
+                <viewController id="Uz8-zl-gnp" customClass="HouseViewController" customModule="House" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GEN-TZ-ZpI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pf9-Q5-8EF">
+                                <rect key="frame" x="148.66666666666666" y="342.66666666666669" width="116.99999999999997" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WL3-UD-4XG"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Pf9-Q5-8EF" firstAttribute="centerX" secondItem="GEN-TZ-ZpI" secondAttribute="centerX" id="ZQA-Lr-U53"/>
+                            <constraint firstItem="Pf9-Q5-8EF" firstAttribute="centerY" secondItem="GEN-TZ-ZpI" secondAttribute="centerY" id="zE6-YQ-TnM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qUc-LS-do3">
+                        <barButtonItem key="leftBarButtonItem" image="line.horizontal.3" catalog="system" id="q0i-lB-7TN">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="didTapSlider" destination="Uz8-zl-gnp" id="H9j-xK-usU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TDt-Wp-EzC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="WxK-MQ-H3R">
+                    <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                </button>
+            </objects>
+            <point key="canvasLocation" x="1108.6956521739132" y="37.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YOV-6m-CSf">
+            <objects>
+                <navigationController storyboardIdentifier="HouseVC" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="cMf-Tx-p0D" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VwV-Bt-L2F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.82745098039215681" green="0.82745098039215681" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.96078431372549022" green="0.50588235294117645" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Uz8-zl-gnp" kind="relationship" relationship="rootViewController" id="ufH-KP-aH2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IoC-Wg-Ggx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="198.55072463768118" y="37.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

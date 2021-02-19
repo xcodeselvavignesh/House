@@ -1,0 +1,21 @@
+
+/* Class = "UIButton"; normalTitle = "Not Verify"; ObjectID = "0qw-P4-M8s"; */
+"0qw-P4-M8s.normalTitle" = "未承認";
+
+/* Class = "UIButton"; normalTitle = "All"; ObjectID = "0xB-Tj-uZi"; */
+"0xB-Tj-uZi.normalTitle" = "全て";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "5w6-fO-osA"; */
+"5w6-fO-osA.normalTitle" = "選択";
+
+/* Class = "UIButton"; normalTitle = "Verify"; ObjectID = "a2i-rM-xnY"; */
+"a2i-rM-xnY.normalTitle" = "承認済";
+
+/* Class = "UILabel"; text = "|"; ObjectID = "i5J-6s-fq3"; */
+"i5J-6s-fq3.text" = "|";
+
+/* Class = "UILabel"; text = "Users List"; ObjectID = "nAH-nW-JTI"; */
+"nAH-nW-JTI.text" = "ユーザ一覧";
+
+/* Class = "UILabel"; text = "|"; ObjectID = "ww1-ZL-N9k"; */
+"ww1-ZL-N9k.text" = "|";

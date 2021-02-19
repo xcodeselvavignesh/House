@@ -1,0 +1,23 @@
+/*
+  Localizable.strings House
+
+  Created by Catalina on 20/01/21.
+  
+*/
+
+"Lbl_Required" = "Required";
+"Lbl_Credential_Error" = "Credentials does not match";
+"Lbl_Menu_House" = "Houses";
+"Lbl_Menu_User" = "User";
+"Lbl_Menu_MailStatus" = "Mail Status";
+"Lbl_Menu_MailContent" = "Mail Content";
+"Lbl_Menu_Change" = "Change Password";
+"Lbl_Menu_EN" = "英語";
+"Lbl_Menu_JA" = "日本語";
+"Lbl_Menu_Logout" = "Logout";
+"Lbl_Menu_Assets" = "Assets";
+"Lbl_Alert_Message" = "言語を変更しますか？";
+"Lbl_Alert" = "アラート";
+"Lbl_OK" = "はい";
+"Lbl_Cancel" = "いいえ";
+"Lbl_NoDataFound" = "No Records Found";

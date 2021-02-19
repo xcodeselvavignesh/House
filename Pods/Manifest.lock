@@ -1,0 +1,24 @@
+PODS:
+  - DropDown (2.3.13)
+  - EasyTipView (2.1.0)
+  - SideMenu (6.5.0)
+
+DEPENDENCIES:
+  - DropDown
+  - EasyTipView (~> 2.1)
+  - SideMenu
+
+SPEC REPOS:
+  trunk:
+    - DropDown
+    - EasyTipView
+    - SideMenu
+
+SPEC CHECKSUMS:
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  EasyTipView: a92b6edc377b81c5ac18e9fd35d5ee78e9409488
+  SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
+
+PODFILE CHECKSUM: a6c69ad86ad40317ed77b9296e97641372117a6e
+
+COCOAPODS: 1.10.1

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Mail Status View Controller-->
+        <scene sceneID="rsg-81-lFv">
+            <objects>
+                <viewController storyboardIdentifier="MailStatusIndexVC" id="ZTB-vW-iRT" customClass="MailStatusViewController" customModule="House" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WRs-08-JbE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8MF-8B-Fcr">
+                                <rect key="frame" x="20" y="124" width="374" height="738"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gV9-m4-BZM">
+                                <rect key="frame" x="20" y="44" width="374" height="55"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mail-40" translatesAutoresizingMaskIntoConstraints="NO" id="TX4-Qs-z0c">
+                                        <rect key="frame" x="0.0" y="15" width="40" height="40"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mail Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZb-Pm-oVQ">
+                                        <rect key="frame" x="58" y="17.5" width="138.5" height="35"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="TX4-Qs-z0c" secondAttribute="bottom" id="E63-Vr-Zae"/>
+                                    <constraint firstItem="IZb-Pm-oVQ" firstAttribute="leading" secondItem="TX4-Qs-z0c" secondAttribute="trailing" constant="18" id="WN6-CD-nBA"/>
+                                    <constraint firstItem="TX4-Qs-z0c" firstAttribute="leading" secondItem="gV9-m4-BZM" secondAttribute="leading" id="gKh-TW-N3R"/>
+                                    <constraint firstItem="TX4-Qs-z0c" firstAttribute="top" secondItem="gV9-m4-BZM" secondAttribute="top" constant="15" id="kMT-zp-Idh"/>
+                                    <constraint firstItem="IZb-Pm-oVQ" firstAttribute="centerY" secondItem="TX4-Qs-z0c" secondAttribute="centerY" id="oCl-SG-J6S"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HYV-qt-LIS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8MF-8B-Fcr" firstAttribute="leading" secondItem="HYV-qt-LIS" secondAttribute="leading" constant="20" id="3Df-UB-ccD"/>
+                            <constraint firstItem="gV9-m4-BZM" firstAttribute="leading" secondItem="HYV-qt-LIS" secondAttribute="leading" constant="20" id="BHC-SJ-KYe"/>
+                            <constraint firstItem="HYV-qt-LIS" firstAttribute="bottom" secondItem="8MF-8B-Fcr" secondAttribute="bottom" id="P00-9G-9GM"/>
+                            <constraint firstItem="HYV-qt-LIS" firstAttribute="trailing" secondItem="gV9-m4-BZM" secondAttribute="trailing" constant="20" id="WIX-ml-ofD"/>
+                            <constraint firstItem="HYV-qt-LIS" firstAttribute="trailing" secondItem="8MF-8B-Fcr" secondAttribute="trailing" constant="20" id="feh-Ha-h7U"/>
+                            <constraint firstItem="gV9-m4-BZM" firstAttribute="top" secondItem="HYV-qt-LIS" secondAttribute="top" id="gOx-T2-jHb"/>
+                            <constraint firstItem="8MF-8B-Fcr" firstAttribute="top" secondItem="gV9-m4-BZM" secondAttribute="bottom" constant="25" id="tnb-Sn-lwz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="MailStatusList" destination="8MF-8B-Fcr" id="bLD-bO-UZy"/>
+                        <segue destination="twO-VV-cMM" kind="show" identifier="MailStatusViewSegue" id="0aD-Pu-0Nj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MDs-1A-pGs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="295.6521739130435" y="-155.35714285714286"/>
+        </scene>
+        <!--MailStatusViewVC-->
+        <scene sceneID="jlo-r4-3fy">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MailStatusView" referencedIdentifier="MailStatusViewVC" id="twO-VV-cMM" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="i0Z-9H-bYO"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ekL-py-9am" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="792" y="-273"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mail-40" width="40" height="40"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
