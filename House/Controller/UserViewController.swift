@@ -31,6 +31,8 @@ class UserViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     private var sortingBtntext = "UserId"
     private var sortingImg = "upArrow-20"
     private var sortOrder = "DESC"
+    private var id = "HMS0001"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -262,12 +264,26 @@ class UserViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             let imageName = "female-40.jpg"
             cell.usrImage.image = UIImage(named: (imageName))
         }
-        cell.usrID.text = UserData.userId
+        cell.usrID.setAttributedTitle(NSAttributedString(string: UserData.userId), for: .normal)
+        cell.usrID.addTarget(self, action: #selector(self.singleUserView(sender:)), for: .touchUpInside)
         cell.usrName.text = UserData.userName
         cell.usrDOB.text = "\u{f073}" + " " + UserData.userDOB
         cell.usrEmail.text = "\u{f003}" + " " + UserData.userEmail
         cell.usrMobNo.text = "\u{f095}" + " " + UserData.userMobNo
         return cell
+    }
+    
+    @objc func singleUserView (sender: UIButton) {
+        self.id = (sender.titleLabel?.text)!
+        performSegue(withIdentifier: "userSingleView", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let id = self.id
+        if segue.identifier == "userSingleView" {
+            let vc = segue.destination as! SingleUserViewController
+            vc.id = id
+        }
     }
    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

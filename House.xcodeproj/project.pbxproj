@@ -39,6 +39,8 @@
 		1AF6DD1F25B588400015EC4D /* MailContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF6DD1E25B588400015EC4D /* MailContentViewController.swift */; };
 		1AF6DD2225B58B1D0015EC4D /* MailContent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AF6DD2125B58B1C0015EC4D /* MailContent.storyboard */; };
 		32C0A37D5AE2124F3868A536 /* Pods_House.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94FBC54F7BB9A1ABBA341BFD /* Pods_House.framework */; };
+		38E71AA125DFA36800B784EF /* SingleUserView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E71AA025DFA36800B784EF /* SingleUserView.storyboard */; };
+		38E71AA425DFA3C100B784EF /* SingleUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E71AA325DFA3C100B784EF /* SingleUserViewController.swift */; };
 		4A8A764725DA6B7800579FF8 /* MailStatusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A764625DA6B7800579FF8 /* MailStatusController.swift */; };
 		4AAA0E4E25DBFE680036F9CF /* MailStatusView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AAA0E5025DBFE680036F9CF /* MailStatusView.storyboard */; };
 /* End PBXBuildFile section */
@@ -92,6 +94,8 @@
 		1AF6DD1B25B587360015EC4D /* MailStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailStatusViewController.swift; sourceTree = "<group>"; };
 		1AF6DD1E25B588400015EC4D /* MailContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailContentViewController.swift; sourceTree = "<group>"; };
 		1AF6DD2125B58B1C0015EC4D /* MailContent.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MailContent.storyboard; sourceTree = "<group>"; };
+		38E71AA025DFA36800B784EF /* SingleUserView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SingleUserView.storyboard; sourceTree = "<group>"; };
+		38E71AA325DFA3C100B784EF /* SingleUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleUserViewController.swift; sourceTree = "<group>"; };
 		4A0D586F25DD0DBE009C88AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MailStatusView.strings; sourceTree = "<group>"; };
 		4A0D587225DD0DD0009C88AF /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MailStatusView.strings; sourceTree = "<group>"; };
 		4A8A764625DA6B7800579FF8 /* MailStatusController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailStatusController.swift; sourceTree = "<group>"; };
@@ -176,6 +180,7 @@
 				1A00FF1025A6D22300CC8AF6 /* Forgot_PasswordViewController.swift */,
 				1A1C22EB25A823E5004B3DF3 /* UserViewController.swift */,
 				4A8A764625DA6B7800579FF8 /* MailStatusController.swift */,
+				38E71AA325DFA3C100B784EF /* SingleUserViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 				1A5CDE7A25A5935000F2BCA5 /* Forgot_Password.storyboard */,
 				1ABB198325C18C1700BEA113 /* UserIndex.storyboard */,
 				4AAA0E5025DBFE680036F9CF /* MailStatusView.storyboard */,
+				38E71AA025DFA36800B784EF /* SingleUserView.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -282,6 +288,7 @@
 				1A4DC23D25936E8300AD6D73 /* Main.storyboard in Resources */,
 				1AF6DD2225B58B1D0015EC4D /* MailContent.storyboard in Resources */,
 				1ABB196F25C17D0100BEA113 /* MailStatusIndex.storyboard in Resources */,
+				38E71AA125DFA36800B784EF /* SingleUserView.storyboard in Resources */,
 				1A5CDE7B25A5935000F2BCA5 /* Forgot_Password.storyboard in Resources */,
 				1AA45D6F25C199A40005B38C /* UserListTableViewCell.xib in Resources */,
 				1ADEFB3525BABD900062BF4E /* House.storyboard in Resources */,
@@ -348,6 +355,7 @@
 				1A4DC23A25936E8300AD6D73 /* ViewController.swift in Sources */,
 				1AF6DD1C25B587380015EC4D /* MailStatusViewController.swift in Sources */,
 				1A1C22EC25A823E5004B3DF3 /* UserViewController.swift in Sources */,
+				38E71AA425DFA3C100B784EF /* SingleUserViewController.swift in Sources */,
 				1AF6DD1F25B588400015EC4D /* MailContentViewController.swift in Sources */,
 				1ADEFB4525BAD7180062BF4E /* BundleExtension.swift in Sources */,
 				1A24EF7D259C980E00E57F4D /* RegisterViewController.swift in Sources */,

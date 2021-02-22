@@ -10,7 +10,7 @@ import UIKit
 class UserListTableViewCell: UITableViewCell {
     
     @IBOutlet var usrImage: UIImageView!
-    @IBOutlet var usrID: UILabel!
+    @IBOutlet var usrID: UIButton!
     @IBOutlet var usrName: UILabel!
     @IBOutlet var usrDOB: UILabel!
     @IBOutlet var usrEmail: UILabel!
