@@ -39,7 +39,8 @@ class Common {
     
     public lazy var singleUserViewController: UIViewController = {
         let storyboard = UIStoryboard(name: "SingleUserView", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "SingleUserViewVC")
+        let vc = storyboard.instantiateViewController(withIdentifier: "SingleUserViewVC") as! SingleUserViewController
+        vc.id = UserDefaults.standard.string(forKey: "UserID")!
         return vc
     }()
     public func getAppLocale() -> String {

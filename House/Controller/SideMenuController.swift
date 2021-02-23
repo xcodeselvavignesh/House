@@ -58,15 +58,7 @@ class SideMenuController {
     func DidSelectMenu(menuItem: String, viewController: UIViewController) {
         if((UserDefaults.standard.integer(forKey: "userType")) == 1){
             switch menuItem {
-                case NSLocalizedString("Welcome \(UserDefaults.standard.string(forKey: "lastName")!)", comment: ""):
-                    //let API = "UserAPI.php"
-                    //let jsonParam: [String: Any] = ["ProcessName": "userSingleView" , "userId": UserDefaults.standard.string(forKey: "UserID")!]
-                    //Common.sharedInstance.RequestFromApi(api: API, jsonParams: jsonParam, completionHandler: {(result) -> Void in
-                    //})
-                    id = UserDefaults.standard.string(forKey: "UserID")!
-                    //var vc = self.singleUserViewController
-                    //vc.id = id
-                   
+            case NSLocalizedString("Welcome \(UserDefaults.standard.string(forKey: "lastName")!)", comment: ""):
                     self.singleUserViewController!.view.isHidden = false
                     self.userController!.view.isHidden = true
                     self.mailStatusController!.view.isHidden = true
