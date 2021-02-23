@@ -1,0 +1,45 @@
+
+/* Class = "UILabel"; text = "Given Name"; ObjectID = "BFC-mX-YaP"; */
+"BFC-mX-YaP.text" = "Given Name";
+
+/* Class = "UILabel"; text = "Mobile No"; ObjectID = "HeF-VY-PFW"; */
+"HeF-VY-PFW.text" = "Mobile No";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "LQu-w4-dan"; */
+"LQu-w4-dan.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "V1Y-bq-Yeq"; */
+"V1Y-bq-Yeq.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "XlY-lv-zcQ"; */
+"XlY-lv-zcQ.text" = "Label";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "eiZ-hZ-4rk"; */
+"eiZ-hZ-4rk.text" = "Email";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "hIl-dq-tlT"; */
+"hIl-dq-tlT.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "nI5-eg-Z38"; */
+"nI5-eg-Z38.text" = "Label";
+
+/* Class = "UILabel"; text = "Date Of Birth"; ObjectID = "otJ-NJ-iTE"; */
+"otJ-NJ-iTE.text" = "Date Of Birth";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "qCR-QW-iMN"; */
+"qCR-QW-iMN.text" = "Label";
+
+/* Class = "UILabel"; text = "Gender"; ObjectID = "th6-sL-obx"; */
+"th6-sL-obx.text" = "Gender";
+
+/* Class = "UILabel"; text = "User View"; ObjectID = "vDX-Qr-B48"; */
+"vDX-Qr-B48.text" = "User View";
+
+/* Class = "UILabel"; text = "Sur Name"; ObjectID = "vlp-ww-211"; */
+"vlp-ww-211.text" = "Sur Name";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "waA-fy-lWV"; */
+"waA-fy-lWV.text" = "Label";
+
+/* Class = "UILabel"; text = "User Id"; ObjectID = "xXv-lv-cFy"; */
+"xXv-lv-cFy.text" = "User Id";

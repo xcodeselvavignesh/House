@@ -81,7 +81,7 @@ class MenuController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
         let menuLabel = cell?.textLabel?.text
-        if(menuLabel != Common.sharedInstance.getAppLocale() && menuLabel != NSLocalizedString("Lbl_Menu_Logout", comment: "") && menuLabel != "Welcome \(UserDefaults.standard.string(forKey: "lastName")!)") {
+        if(menuLabel != Common.sharedInstance.getAppLocale() && menuLabel != NSLocalizedString("Lbl_Menu_Logout", comment: "")) {
             setSelectedColor(tableView: tableView, indexPath: indexPath)
             tableView.cellForRow(at: IndexPath(row: 1, section: 0))?.contentView.backgroundColor = color
         }

@@ -56,7 +56,6 @@ class SideMenuController {
     }
     
     func DidSelectMenu(menuItem: String, viewController: UIViewController) {
-        print(UserDefaults.standard.string(forKey: "UserID")!)
         if((UserDefaults.standard.integer(forKey: "userType")) == 1){
             switch menuItem {
                 case NSLocalizedString("Welcome Mcrobit", comment: ""):

@@ -31,7 +31,6 @@ class SingleUserViewController: UIViewController
     var genderFlg = 1
     
     override func viewDidLoad() {
-       print("kasthuri")
         userDataView.layer.borderWidth = 3
         userDataView.layer.borderColor = UIColor.gray.cgColor
         self.getUserData()
