@@ -3,7 +3,7 @@
 "BFC-mX-YaP.text" = "名";
 
 /* Class = "UILabel"; text = "Mobile No"; ObjectID = "HeF-VY-PFW"; */
-"HeF-VY-PFW.text" = "Mobile No";
+"HeF-VY-PFW.text" = "携帯番号";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "LQu-w4-dan"; */
 "LQu-w4-dan.text" = "Label";
