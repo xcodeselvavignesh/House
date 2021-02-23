@@ -9,6 +9,9 @@ class SideMenuController {
     private var mailStatusController: UIViewController?
     private var mailcontentController: UIViewController?
     private var changePasswordController: UIViewController?
+    private var singleUserViewController: UIViewController?
+    
+    var id : String = ""
     
     init() {
         let common = Common()
@@ -16,6 +19,7 @@ class SideMenuController {
         self.mailStatusController = common.mailStatusController
         self.mailcontentController = common.mailcontentController
         self.changePasswordController = common.changePasswordController
+        self.singleUserViewController = common.singleUserViewController
     }
     
     public func AddChildControllers(viewController: UIViewController) {
@@ -24,56 +28,81 @@ class SideMenuController {
         viewController.addChild(self.mailStatusController!)
         viewController.addChild(self.mailcontentController!)
         viewController.addChild(self.changePasswordController!)
+        viewController.addChild(self.singleUserViewController!)
         //Adding views to parent
         viewController.view.addSubview(self.userController!.view)
         viewController.view.addSubview(self.mailStatusController!.view)
         viewController.view.addSubview(self.mailcontentController!.view)
         viewController.view.addSubview(self.changePasswordController!.view)
+        viewController.view.addSubview(self.singleUserViewController!.view)
         //set frame
         self.userController!.view.frame = viewController.view.bounds
         self.mailStatusController!.view.frame = viewController.view.bounds
         self.mailcontentController!.view.frame = viewController.view.bounds
         self.changePasswordController!.view.frame = viewController.view.bounds
+        self.singleUserViewController!.view.frame = viewController.view.bounds
         //ViewDidLoad
         self.userController!.didMove(toParent: viewController)
         self.mailStatusController!.didMove(toParent: viewController)
         self.mailcontentController!.didMove(toParent: viewController)
         self.changePasswordController!.didMove(toParent: viewController)
+        self.singleUserViewController!.didMove(toParent: viewController)
         //Hidden
         self.userController!.view.isHidden = true
         self.mailStatusController!.view.isHidden = true
         self.mailcontentController!.view.isHidden = true
         self.changePasswordController!.view.isHidden = true
+        self.singleUserViewController!.view.isHidden = true
     }
     
     func DidSelectMenu(menuItem: String, viewController: UIViewController) {
+        print(UserDefaults.standard.string(forKey: "UserID")!)
         if((UserDefaults.standard.integer(forKey: "userType")) == 1){
             switch menuItem {
+                case NSLocalizedString("Welcome Mcrobit", comment: ""):
+                    //let API = "UserAPI.php"
+                    //let jsonParam: [String: Any] = ["ProcessName": "userSingleView" , "userId": UserDefaults.standard.string(forKey: "UserID")!]
+                    //Common.sharedInstance.RequestFromApi(api: API, jsonParams: jsonParam, completionHandler: {(result) -> Void in
+                    //})
+                    id = UserDefaults.standard.string(forKey: "UserID")!
+                    //var vc = self.singleUserViewController
+                    //vc.id = id
+                   
+                    self.singleUserViewController!.view.isHidden = false
+                    self.userController!.view.isHidden = true
+                    self.mailStatusController!.view.isHidden = true
+                    self.mailcontentController!.view.isHidden = true
+                    self.changePasswordController!.view.isHidden = true
                 case NSLocalizedString("Lbl_Menu_House", comment: ""):
                     self.userController!.view.isHidden = true
                     self.mailStatusController!.view.isHidden = true
                     self.mailcontentController!.view.isHidden = true
                     self.changePasswordController!.view.isHidden = true
+                    self.singleUserViewController!.view.isHidden = true
                 case NSLocalizedString("Lbl_Menu_User", comment: ""):
                     self.userController!.view.isHidden = false
                     self.mailStatusController!.view.isHidden = true
                     self.mailcontentController!.view.isHidden = true
                     self.changePasswordController!.view.isHidden = true
+                    self.singleUserViewController!.view.isHidden = true
                 case NSLocalizedString("Lbl_Menu_MailStatus", comment: ""):
                     self.userController!.view.isHidden = true
                     self.mailStatusController!.view.isHidden = false
                     self.mailcontentController!.view.isHidden = true
                     self.changePasswordController!.view.isHidden = true
+                    self.singleUserViewController!.view.isHidden = true
                 case NSLocalizedString("Lbl_Menu_MailContent", comment: ""):
                     self.userController!.view.isHidden = true
                     self.mailStatusController!.view.isHidden = true
                     self.mailcontentController!.view.isHidden = false
                     self.changePasswordController!.view.isHidden = true
+                    self.singleUserViewController!.view.isHidden = true
                 case NSLocalizedString("Lbl_Menu_Change", comment: ""):
                     self.userController!.view.isHidden = true
                     self.mailStatusController!.view.isHidden = true
                     self.mailcontentController!.view.isHidden = true
                     self.changePasswordController!.view.isHidden = false
+                    self.singleUserViewController!.view.isHidden = true
                 case NSLocalizedString("Lbl_Menu_Logout", comment: ""):
                     let confirmationAlert = Common.DialogResult(title: "Alert", message: "Are you sure, you want to logout?")
                     let okClick = UIAlertAction(title: "OK", style: .default, handler: {alert -> Void in
@@ -109,7 +138,7 @@ class SideMenuController {
                         viewController.present(confirmationAlert, animated: true, completion: nil)
                     }
                 default:
-                    print("failed")
+                    print("failed12")
             }
         } else {
             switch menuItem {

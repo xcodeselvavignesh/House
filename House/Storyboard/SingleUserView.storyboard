@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vQl-us-FV9">
-                                <rect key="frame" x="18" y="64" width="378" height="55"/>
+                                <rect key="frame" x="18" y="44" width="378" height="55"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list-40" translatesAutoresizingMaskIntoConstraints="NO" id="tVS-2R-gJw">
                                         <rect key="frame" x="0.0" y="15" width="40" height="40"/>
@@ -39,10 +39,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lys-Uj-IyH">
-                                <rect key="frame" x="18" y="139" width="378" height="200"/>
+                                <rect key="frame" x="18" y="119" width="378" height="220"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Id" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXv-lv-cFy">
-                                        <rect key="frame" x="0.0" y="8" width="98" height="21"/>
+                                        <rect key="frame" x="8" y="7" width="98" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -56,7 +56,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sur Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vlp-ww-211">
-                                        <rect key="frame" x="0.0" y="37" width="98" height="21"/>
+                                        <rect key="frame" x="8" y="36" width="98" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -70,7 +70,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Given Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFC-mX-YaP">
-                                        <rect key="frame" x="0.0" y="66" width="98" height="21"/>
+                                        <rect key="frame" x="8" y="64" width="98" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -84,7 +84,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gender" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="th6-sL-obx">
-                                        <rect key="frame" x="0.0" y="95" width="98" height="21"/>
+                                        <rect key="frame" x="8" y="94" width="98" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -98,7 +98,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date Of Birth" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="otJ-NJ-iTE">
-                                        <rect key="frame" x="-2" y="124" width="100" height="21"/>
+                                        <rect key="frame" x="6" y="122" width="100" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -112,7 +112,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiZ-hZ-4rk">
-                                        <rect key="frame" x="-2" y="153" width="100" height="21"/>
+                                        <rect key="frame" x="6" y="153" width="100" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -125,15 +125,15 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mobile No" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeF-VY-PFW">
-                                        <rect key="frame" x="0.0" y="182" width="98" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="waA-fy-lWV">
+                                        <rect key="frame" x="125" y="182" width="195" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="waA-fy-lWV">
-                                        <rect key="frame" x="125" y="182" width="195" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mobile No" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeF-VY-PFW">
+                                        <rect key="frame" x="8" y="182" width="98" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -142,7 +142,7 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="jhu-Ps-P1X"/>
+                                    <constraint firstAttribute="height" constant="220" id="jhu-Ps-P1X"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -150,7 +150,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="p2D-4W-ccD" firstAttribute="trailing" secondItem="vQl-us-FV9" secondAttribute="trailing" constant="18" id="40d-3g-PoR"/>
-                            <constraint firstItem="vQl-us-FV9" firstAttribute="top" secondItem="p2D-4W-ccD" secondAttribute="top" constant="20" id="8gf-HD-T6u"/>
+                            <constraint firstItem="vQl-us-FV9" firstAttribute="top" secondItem="p2D-4W-ccD" secondAttribute="top" id="8gf-HD-T6u"/>
                             <constraint firstItem="p2D-4W-ccD" firstAttribute="trailing" secondItem="Lys-Uj-IyH" secondAttribute="trailing" constant="18" id="Hqo-sT-yHz"/>
                             <constraint firstItem="vQl-us-FV9" firstAttribute="leading" secondItem="p2D-4W-ccD" secondAttribute="leading" constant="18" id="RQX-TQ-BLx"/>
                             <constraint firstItem="Lys-Uj-IyH" firstAttribute="leading" secondItem="p2D-4W-ccD" secondAttribute="leading" constant="18" id="Wrz-hF-u98"/>
@@ -164,6 +164,7 @@
                         <outlet property="gender" destination="V1Y-bq-Yeq" id="FUT-y1-fsi"/>
                         <outlet property="lastName" destination="LQu-w4-dan" id="XFb-t2-cEr"/>
                         <outlet property="mobileNo" destination="waA-fy-lWV" id="byw-LB-zzX"/>
+                        <outlet property="userDataView" destination="Lys-Uj-IyH" id="vhM-Fg-G8H"/>
                         <outlet property="userId" destination="hIl-dq-tlT" id="hmU-Z8-CC5"/>
                     </connections>
                 </viewController>

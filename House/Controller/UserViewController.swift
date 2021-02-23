@@ -31,7 +31,7 @@ class UserViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     private var sortingBtntext = "UserId"
     private var sortingImg = "upArrow-20"
     private var sortOrder = "DESC"
-    private var id = "HMS0001"
+    private var id = "AMS0001"
     
     
     override func viewDidLoad() {
@@ -193,11 +193,12 @@ class UserViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                     dict = result[index] as! [String: Any]
                     let userId = dict["userId"] as? String
                     let firstName = dict["firstName"] as? String
+                    let lastName = dict["lastName"] as? String
                     let gender = dict["gender"] as? Int
                     let email = dict["email"] as? String
                     let mobileNo = dict["mobileNo"] as? String
                     let dob = dict["dob"] as? String
-                    let data = ModelData(userId: userId!, userName: firstName!, userEmail: email!, userDOB: dob!, userMobNo: mobileNo!, gender: gender!)
+                    let data = ModelData(userId: userId!, userName: firstName!+" "+lastName!, userEmail: email!, userDOB: dob!, userMobNo: mobileNo!, gender: gender!)
                     self.dataJson.append(data)
                 }
                 DispatchQueue.main.async {

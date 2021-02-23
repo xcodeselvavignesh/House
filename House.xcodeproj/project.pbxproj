@@ -122,8 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				1ADEFB4425BAD7170062BF4E /* BundleExtension.swift */,
-				1AF6DD1825B585F30015EC4D /* sideMenu.swift */,
 				1A00FF1A25A70E5300CC8AF6 /* Common.swift */,
+				1AF6DD1825B585F30015EC4D /* sideMenu.swift */,
 				1ADEFB2925BABC9D0062BF4E /* Localizable.strings */,
 			);
 			path = Common;

@@ -19,6 +19,7 @@ class SingleUserViewController: UIViewController
     @IBOutlet weak var dob: UILabel!
     @IBOutlet weak var email: UILabel!
     @IBOutlet weak var mobileNo: UILabel!
+    @IBOutlet weak var userDataView: UIView!
     
     var id : String = ""
     var usrId : String = ""
@@ -30,6 +31,9 @@ class SingleUserViewController: UIViewController
     var genderFlg = 1
     
     override func viewDidLoad() {
+       print("kasthuri")
+        userDataView.layer.borderWidth = 3
+        userDataView.layer.borderColor = UIColor.gray.cgColor
         self.getUserData()
     }
     

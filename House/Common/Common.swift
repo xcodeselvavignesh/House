@@ -37,6 +37,11 @@ class Common {
         return vc
     }()
     
+    public lazy var singleUserViewController: UIViewController = {
+        let storyboard = UIStoryboard(name: "SingleUserView", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "SingleUserViewVC")
+        return vc
+    }()
     public func getAppLocale() -> String {
        if(UserDefaults.standard.integer(forKey: "langFlg") == 1) {
            return NSLocalizedString("Lbl_Menu_EN", comment: "")
