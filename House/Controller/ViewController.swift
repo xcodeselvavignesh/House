@@ -114,9 +114,9 @@ class ViewController: UIViewController {
                     let sessionVar = result["0"] as! [String : Any]
                     let userId = sessionVar["userId"] as? String
                     let emailId = sessionVar["email"] as? String
-                    let userType = sessionVar["userType"] as? Int
+                    let userType = Int((sessionVar["userType"] as? String)!)
                     let lastName = sessionVar["lastName"] as? String
-                    let langFlg = sessionVar["langFlg"] as? Int
+                    let langFlg = Int((sessionVar["langFlg"] as? String)!)
                     UserDefaults.standard.setValue(userId!, forKey: "UserID")
                     UserDefaults.standard.setValue(emailId!, forKey: "emailID")
                     UserDefaults.standard.setValue(userType, forKey: "userType")

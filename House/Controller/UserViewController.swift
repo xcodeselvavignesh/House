@@ -194,7 +194,7 @@ class UserViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                     let userId = dict["userId"] as? String
                     let firstName = dict["firstName"] as? String
                     let lastName = dict["lastName"] as? String
-                    let gender = dict["gender"] as? Int
+                    let gender = Int((dict["gender"] as? String)!)
                     let email = dict["email"] as? String
                     let mobileNo = dict["mobileNo"] as? String
                     let dob = dict["dob"] as? String

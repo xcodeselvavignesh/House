@@ -60,7 +60,7 @@ class SingleUserViewController: UIViewController
                     self.fName.append(firstName!)
                     let lastName = dict["lastName"] as? String
                     self.lName.append(lastName!)
-                    let gender = dict["gender"] as? Int
+                    let gender = Int((dict["gender"] as? String)!)
                     self.genderFlg = (gender)!
                     let dob = dict["dob"] as? String
                     self.date.append(dob!)
