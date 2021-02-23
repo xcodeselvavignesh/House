@@ -17,6 +17,8 @@ class MailStatusController: UIViewController {
     @IBOutlet weak var senddatetime: UILabel!
    
     @IBOutlet weak var mailcontent: UITextView!
+    
+    @IBOutlet weak var msView: UIView!
     var mailStatusUserName : String = ""
     var mailEmail : String = ""
     var msUserName : String = ""
@@ -29,6 +31,10 @@ class MailStatusController: UIViewController {
         self.mailStatusView()
         let textView = UITextView()
         textView.textContainerInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        msView.layer.masksToBounds = true
+        msView.layer.borderColor = UIColor.black.cgColor
+        msView.layer.borderWidth = 0.8
+        msView.layer.cornerRadius = 3
         // Do any additional setup after loading the view.
     }
 
@@ -75,7 +81,10 @@ class MailStatusController: UIViewController {
         to.text = self.msMail
         subject.text = msSubject
         senddatetime.text = self.msSendDateTime
-        mailcontent.text = self.msContent
+        
+        mailcontent.attributedText = self.msContent.htmlToAttributedString
+        mailcontent.font = UIFont.systemFont(ofSize: 15.0)
+    
     }
     /*
     // MARK: - Navigation
@@ -87,4 +96,18 @@ class MailStatusController: UIViewController {
     }
     */
 
+}
+extension String {
+    var htmlToAttributedString: NSAttributedString? {
+
+        guard let data = data(using: .utf8) else { return nil }
+        do {
+            return try NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding:String.Encoding.utf8.rawValue], documentAttributes: nil)
+        } catch {
+            return nil
+        }
+    }
+    var htmlToString: String {
+        return htmlToAttributedString?.string ?? ""
+    }
 }

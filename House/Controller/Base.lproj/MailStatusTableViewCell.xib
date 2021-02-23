@@ -22,14 +22,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="333" height="25"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOw-F9-4uH">
-                                <rect key="frame" x="10" y="0.0" width="33" height="30"/>
+                                <rect key="frame" x="10" y="0.0" width="75.5" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="0.016595588997006416" green="0.19550821185112" blue="0.98952049016952515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pri-Po-sGL">
-                                <rect key="frame" x="284" y="4" width="37.5" height="18"/>
+                                <rect key="frame" x="277" y="4" width="45" height="18"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
@@ -38,7 +38,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
-                            <constraint firstItem="Pri-Po-sGL" firstAttribute="leading" secondItem="WOw-F9-4uH" secondAttribute="trailing" constant="280" id="6Nb-IO-fXr"/>
+                            <constraint firstItem="Pri-Po-sGL" firstAttribute="leading" secondItem="WOw-F9-4uH" secondAttribute="trailing" constant="200" id="6Nb-IO-fXr"/>
                             <constraint firstItem="Pri-Po-sGL" firstAttribute="firstBaseline" secondItem="WOw-F9-4uH" secondAttribute="firstBaseline" id="IgV-Ki-JP6"/>
                             <constraint firstAttribute="bottom" secondItem="WOw-F9-4uH" secondAttribute="bottom" id="LD0-8M-8gE"/>
                             <constraint firstItem="WOw-F9-4uH" firstAttribute="leading" secondItem="dl4-xr-uBA" secondAttribute="leading" constant="10" id="kDO-Zi-cUb"/>

@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X2a-76-imU">
-                                <rect key="frame" x="20" y="44" width="374" height="55"/>
+                                <rect key="frame" x="15" y="44" width="379" height="55"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mail-40" translatesAutoresizingMaskIntoConstraints="NO" id="wAy-cB-hI8">
                                         <rect key="frame" x="0.0" y="15" width="40" height="40"/>
@@ -39,67 +39,67 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6qx-MP-YAw">
-                                <rect key="frame" x="0.0" y="99" width="414" height="763"/>
+                                <rect key="frame" x="15" y="119" width="384" height="743"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMY-ny-O3b">
-                                        <rect key="frame" x="40" y="45" width="100" height="22"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <rect key="frame" x="40" y="25" width="89.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" red="0.016595588997006416" green="0.19550821185112" blue="0.98952049016952515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YrG-hN-NVe">
-                                        <rect key="frame" x="145" y="44" width="46" height="23"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <rect key="frame" x="134.5" y="25" width="39.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Khb-qD-Yhx">
-                                        <rect key="frame" x="111" y="87" width="29" height="22"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <rect key="frame" x="103" y="64.5" width="26.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" red="0.016595588997006416" green="0.19550821185112" blue="0.98952049016952515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SS0-eW-W9j">
-                                        <rect key="frame" x="145" y="87" width="46" height="22"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <rect key="frame" x="134.5" y="65" width="39.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subject :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUT-F7-Bxz">
-                                        <rect key="frame" x="69" y="129" width="71" height="21.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <rect key="frame" x="65.5" y="104" width="64" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" red="0.016595588997006416" green="0.19550821185112" blue="0.98952049016952515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yrg-wg-LsT">
-                                        <rect key="frame" x="145" y="129" width="46" height="21.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <rect key="frame" x="134.5" y="104" width="39.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send Date Time :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9Z-sR-rpU">
-                                        <rect key="frame" x="9.5" y="170.5" width="130.5" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="5" y="143.5" width="124.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" red="0.016595588997006416" green="0.19550821185112" blue="0.98952049016952515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hzk-ay-c5y">
-                                        <rect key="frame" x="145" y="169.5" width="46" height="21.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <rect key="frame" x="134.5" y="143.5" width="39.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mail Content :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cT1-wQ-6Vf">
-                                        <rect key="frame" x="28.5" y="211.5" width="111.5" height="22"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <rect key="frame" x="29" y="183" width="100.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" red="0.016595588997006416" green="0.19550821185112" blue="0.98952049016952515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ifh-cf-Xzp">
-                                        <rect key="frame" x="142" y="204" width="49" height="459"/>
+                                        <rect key="frame" x="131.5" y="176" width="42.5" height="547"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
@@ -118,9 +118,9 @@
                                     <constraint firstItem="cT1-wQ-6Vf" firstAttribute="trailing" secondItem="LMY-ny-O3b" secondAttribute="trailing" id="VXC-x7-WXc"/>
                                     <constraint firstItem="Yrg-wg-LsT" firstAttribute="trailing" secondItem="YrG-hN-NVe" secondAttribute="trailing" id="WBi-he-ELU"/>
                                     <constraint firstItem="Khb-qD-Yhx" firstAttribute="trailing" secondItem="LMY-ny-O3b" secondAttribute="trailing" id="bCx-if-oOZ"/>
-                                    <constraint firstItem="LMY-ny-O3b" firstAttribute="top" secondItem="6qx-MP-YAw" secondAttribute="top" constant="45" id="god-UJ-bP9"/>
+                                    <constraint firstItem="LMY-ny-O3b" firstAttribute="top" secondItem="6qx-MP-YAw" secondAttribute="top" constant="25" id="god-UJ-bP9"/>
                                     <constraint firstItem="Hzk-ay-c5y" firstAttribute="trailing" secondItem="YrG-hN-NVe" secondAttribute="trailing" id="hx0-I7-D7O"/>
-                                    <constraint firstAttribute="bottom" secondItem="Ifh-cf-Xzp" secondAttribute="bottom" constant="100" id="jKD-hs-S2v"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ifh-cf-Xzp" secondAttribute="bottom" constant="20" id="jKD-hs-S2v"/>
                                     <constraint firstItem="Ifh-cf-Xzp" firstAttribute="top" secondItem="Hzk-ay-c5y" secondAttribute="bottom" constant="13" id="jbv-Zx-41F"/>
                                     <constraint firstItem="SS0-eW-W9j" firstAttribute="trailing" secondItem="YrG-hN-NVe" secondAttribute="trailing" id="nPi-gC-HrG"/>
                                     <constraint firstItem="YrG-hN-NVe" firstAttribute="leading" secondItem="LMY-ny-O3b" secondAttribute="trailing" constant="5" id="oAt-NP-Idm"/>
@@ -136,17 +136,18 @@
                         <viewLayoutGuide key="safeArea" id="rTT-0U-5Wz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6qx-MP-YAw" firstAttribute="top" secondItem="X2a-76-imU" secondAttribute="bottom" id="4ju-NV-BQe"/>
+                            <constraint firstItem="6qx-MP-YAw" firstAttribute="top" secondItem="X2a-76-imU" secondAttribute="bottom" constant="20" id="4ju-NV-BQe"/>
                             <constraint firstItem="rTT-0U-5Wz" firstAttribute="trailing" secondItem="X2a-76-imU" secondAttribute="trailing" constant="20" id="HYz-Nj-4jZ"/>
-                            <constraint firstItem="X2a-76-imU" firstAttribute="leading" secondItem="rTT-0U-5Wz" secondAttribute="leading" constant="20" id="LEC-qd-H5A"/>
+                            <constraint firstItem="X2a-76-imU" firstAttribute="leading" secondItem="rTT-0U-5Wz" secondAttribute="leading" constant="15" id="LEC-qd-H5A"/>
                             <constraint firstItem="X2a-76-imU" firstAttribute="top" secondItem="rTT-0U-5Wz" secondAttribute="top" id="aa2-ty-rqs"/>
-                            <constraint firstItem="6qx-MP-YAw" firstAttribute="trailing" secondItem="rTT-0U-5Wz" secondAttribute="trailing" id="eED-9Q-WUn"/>
+                            <constraint firstItem="6qx-MP-YAw" firstAttribute="trailing" secondItem="rTT-0U-5Wz" secondAttribute="trailing" constant="-15" id="eED-9Q-WUn"/>
                             <constraint firstItem="rTT-0U-5Wz" firstAttribute="bottom" secondItem="6qx-MP-YAw" secondAttribute="bottom" id="gxR-tH-UHt"/>
-                            <constraint firstItem="6qx-MP-YAw" firstAttribute="leading" secondItem="rTT-0U-5Wz" secondAttribute="leading" id="sBg-qv-6ho"/>
+                            <constraint firstItem="6qx-MP-YAw" firstAttribute="leading" secondItem="rTT-0U-5Wz" secondAttribute="leading" constant="15" id="sBg-qv-6ho"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="mailcontent" destination="Ifh-cf-Xzp" id="tSz-ky-4ZY"/>
+                        <outlet property="msView" destination="6qx-MP-YAw" id="3hO-Hi-U5u"/>
                         <outlet property="senddatetime" destination="Hzk-ay-c5y" id="vBh-4T-Sde"/>
                         <outlet property="subject" destination="Yrg-wg-LsT" id="bhl-9E-FqC"/>
                         <outlet property="to" destination="SS0-eW-W9j" id="X5S-wN-qT3"/>

@@ -108,6 +108,8 @@ class ViewController: UIViewController {
         let jsonParam: [String: Any] = ["ProcessName": "Login", "userId": self.TxtUserId.text!, "password": self.TxtPassword.text!]
         Common.sharedInstance.RequestFromApi(api: self.API, jsonParams: jsonParam, completionHandler: {(result) -> Void in
             let msg = result["message"] as? Int
+            var alertMessage: String!
+            var okClick = UIAlertAction()
             DispatchQueue.main.async {
                 if(msg == 0)
                 {
@@ -117,19 +119,31 @@ class ViewController: UIViewController {
                     let userType = Int((sessionVar["userType"] as? String)!)
                     let lastName = sessionVar["lastName"] as? String
                     let langFlg = Int((sessionVar["langFlg"] as? String)!)
+                    let verifyFlg = Int((sessionVar["verifyFlg"] as? String)!)
                     UserDefaults.standard.setValue(userId!, forKey: "UserID")
                     UserDefaults.standard.setValue(emailId!, forKey: "emailID")
                     UserDefaults.standard.setValue(userType, forKey: "userType")
                     UserDefaults.standard.setValue(lastName!, forKey: "lastName")
                     UserDefaults.standard.setValue(langFlg, forKey: "langFlg")
+                    UserDefaults.standard.setValue(verifyFlg, forKey: "verifyFlg")
                     self.Lbl_LoginErrorLabel.isHidden = true
-                    var locale: String
-                    if((UserDefaults.standard.integer(forKey: "langFlg")) == 1){
-                            locale = "ja"
+                    if((UserDefaults.standard.integer(forKey: "verifyFlg")) == 1 || (UserDefaults.standard.integer(forKey: "userType")) == 1){
+                        var locale: String
+                        if((UserDefaults.standard.integer(forKey: "langFlg")) == 1){
+                                locale = "ja"
+                        } else {
+                                locale = "en"
+                        }
+                        Common.sharedInstance.languageChangeAction(locale: locale)
                     } else {
-                            locale = "en"
+                        alertMessage = "Please Verify Email"
+                        okClick = (UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
                     }
-                    Common.sharedInstance.languageChangeAction(locale: locale)
+                    DispatchQueue.main.async {
+                        let confirmationAlert = UIAlertController(title: "Alert", message: alertMessage, preferredStyle: .alert)
+                        confirmationAlert.addAction(okClick)
+                        self.present(confirmationAlert, animated: true, completion: nil)
+                    }
                 }
                 else
                 {
