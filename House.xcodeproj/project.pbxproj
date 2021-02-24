@@ -34,7 +34,6 @@
 		1ADEFB3C25BABE470062BF4E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ADEFB3E25BABE470062BF4E /* Login.storyboard */; };
 		1ADEFB4525BAD7180062BF4E /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADEFB4425BAD7170062BF4E /* BundleExtension.swift */; };
 		1ADEFB5025BAD8A10062BF4E /* HouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADEFB4F25BAD8A10062BF4E /* HouseViewController.swift */; };
-		1AF6DD1925B585F50015EC4D /* sideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF6DD1825B585F30015EC4D /* sideMenu.swift */; };
 		1AF6DD1C25B587380015EC4D /* MailStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF6DD1B25B587360015EC4D /* MailStatusViewController.swift */; };
 		1AF6DD1F25B588400015EC4D /* MailContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF6DD1E25B588400015EC4D /* MailContentViewController.swift */; };
 		1AF6DD2225B58B1D0015EC4D /* MailContent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AF6DD2125B58B1C0015EC4D /* MailContent.storyboard */; };
@@ -90,7 +89,6 @@
 		1ADEFB4325BABE680062BF4E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Login.strings; sourceTree = "<group>"; };
 		1ADEFB4425BAD7170062BF4E /* BundleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
 		1ADEFB4F25BAD8A10062BF4E /* HouseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseViewController.swift; sourceTree = "<group>"; };
-		1AF6DD1825B585F30015EC4D /* sideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sideMenu.swift; sourceTree = "<group>"; };
 		1AF6DD1B25B587360015EC4D /* MailStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailStatusViewController.swift; sourceTree = "<group>"; };
 		1AF6DD1E25B588400015EC4D /* MailContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailContentViewController.swift; sourceTree = "<group>"; };
 		1AF6DD2125B58B1C0015EC4D /* MailContent.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MailContent.storyboard; sourceTree = "<group>"; };
@@ -125,7 +123,6 @@
 			children = (
 				1ADEFB4425BAD7170062BF4E /* BundleExtension.swift */,
 				1A00FF1A25A70E5300CC8AF6 /* Common.swift */,
-				1AF6DD1825B585F30015EC4D /* sideMenu.swift */,
 				1ADEFB2925BABC9D0062BF4E /* Localizable.strings */,
 			);
 			path = Common;
@@ -368,7 +365,6 @@
 				1A1C22E325A821D3004B3DF3 /* UserListTableViewCell.swift in Sources */,
 				4A8A764725DA6B7800579FF8 /* MailStatusController.swift in Sources */,
 				1A00FF1125A6D22300CC8AF6 /* Forgot_PasswordViewController.swift in Sources */,
-				1AF6DD1925B585F50015EC4D /* sideMenu.swift in Sources */,
 				1A00FF1B25A70E5300CC8AF6 /* Common.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
