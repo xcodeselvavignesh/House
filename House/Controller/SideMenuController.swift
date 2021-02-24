@@ -138,15 +138,11 @@ class SideMenuController {
                 self.singleUserViewController!.view.isHidden = false
                 self.changePasswordController!.view.isHidden = true
                 case NSLocalizedString("Lbl_Menu_House", comment: ""):
-                    self.userController!.view.isHidden = true
-                    self.mailStatusController!.view.isHidden = true
-                    self.mailcontentController!.view.isHidden = true
                     self.changePasswordController!.view.isHidden = true
+                    self.singleUserViewController!.view.isHidden = true
                 case NSLocalizedString("Lbl_Menu_Change", comment: ""):
-                    self.userController!.view.isHidden = true
-                    self.mailStatusController!.view.isHidden = true
-                    self.mailcontentController!.view.isHidden = true
                     self.changePasswordController!.view.isHidden = false
+                    self.singleUserViewController!.view.isHidden = true
                 case NSLocalizedString("Lbl_Menu_Logout", comment: ""):
                     let confirmationAlert = Common.DialogResult(title: "Alert", message: "Are you sure, you want to logout?")
                     let okClick = UIAlertAction(title: "OK", style: .default, handler: {alert -> Void in
