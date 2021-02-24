@@ -27,7 +27,6 @@ class MailStatusController: UIViewController {
     var msSendDateTime : String = ""
     var msContent : String = ""
     override func viewDidLoad() {
-        super.viewDidLoad()
         self.mailStatusView()
         let textView = UITextView()
         textView.textContainerInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
@@ -83,7 +82,7 @@ class MailStatusController: UIViewController {
         senddatetime.text = self.msSendDateTime
         
         mailcontent.attributedText = self.msContent.htmlToAttributedString
-        mailcontent.font = UIFont.systemFont(ofSize: 15.0)
+        mailcontent.font = UIFont.systemFont(ofSize: 14.0)
     
     }
     /*

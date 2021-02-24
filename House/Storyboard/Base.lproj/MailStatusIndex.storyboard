@@ -17,11 +17,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8MF-8B-Fcr">
-                                <rect key="frame" x="20" y="124" width="374" height="738"/>
+                                <rect key="frame" x="13" y="124" width="388" height="738"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gV9-m4-BZM">
-                                <rect key="frame" x="20" y="44" width="374" height="55"/>
+                                <rect key="frame" x="13" y="44" width="381" height="55"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mail-40" translatesAutoresizingMaskIntoConstraints="NO" id="TX4-Qs-z0c">
                                         <rect key="frame" x="0.0" y="15" width="40" height="40"/>
@@ -46,11 +46,11 @@
                         <viewLayoutGuide key="safeArea" id="HYV-qt-LIS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="8MF-8B-Fcr" firstAttribute="leading" secondItem="HYV-qt-LIS" secondAttribute="leading" constant="20" id="3Df-UB-ccD"/>
-                            <constraint firstItem="gV9-m4-BZM" firstAttribute="leading" secondItem="HYV-qt-LIS" secondAttribute="leading" constant="20" id="BHC-SJ-KYe"/>
+                            <constraint firstItem="8MF-8B-Fcr" firstAttribute="leading" secondItem="HYV-qt-LIS" secondAttribute="leading" constant="13" id="3Df-UB-ccD"/>
+                            <constraint firstItem="gV9-m4-BZM" firstAttribute="leading" secondItem="HYV-qt-LIS" secondAttribute="leading" constant="13" id="BHC-SJ-KYe"/>
                             <constraint firstItem="HYV-qt-LIS" firstAttribute="bottom" secondItem="8MF-8B-Fcr" secondAttribute="bottom" id="P00-9G-9GM"/>
                             <constraint firstItem="HYV-qt-LIS" firstAttribute="trailing" secondItem="gV9-m4-BZM" secondAttribute="trailing" constant="20" id="WIX-ml-ofD"/>
-                            <constraint firstItem="HYV-qt-LIS" firstAttribute="trailing" secondItem="8MF-8B-Fcr" secondAttribute="trailing" constant="20" id="feh-Ha-h7U"/>
+                            <constraint firstItem="HYV-qt-LIS" firstAttribute="trailing" secondItem="8MF-8B-Fcr" secondAttribute="trailing" constant="13" id="feh-Ha-h7U"/>
                             <constraint firstItem="gV9-m4-BZM" firstAttribute="top" secondItem="HYV-qt-LIS" secondAttribute="top" id="gOx-T2-jHb"/>
                             <constraint firstItem="8MF-8B-Fcr" firstAttribute="top" secondItem="gV9-m4-BZM" secondAttribute="bottom" constant="25" id="tnb-Sn-lwz"/>
                         </constraints>
