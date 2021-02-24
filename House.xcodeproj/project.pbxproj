@@ -42,6 +42,7 @@
 		4A25667925E4DA9E00B778FD /* SingleUserView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A25667B25E4DA9E00B778FD /* SingleUserView.storyboard */; };
 		4A8A764725DA6B7800579FF8 /* MailStatusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A764625DA6B7800579FF8 /* MailStatusController.swift */; };
 		4AAA0E4E25DBFE680036F9CF /* MailStatusView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AAA0E5025DBFE680036F9CF /* MailStatusView.storyboard */; };
+		4AD8EA1F25E65C94004DAC2E /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD8EA1E25E65C94004DAC2E /* SideMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +101,7 @@
 		4A25667F25E4DABB00B778FD /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/SingleUserView.strings; sourceTree = "<group>"; };
 		4A8A764625DA6B7800579FF8 /* MailStatusController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailStatusController.swift; sourceTree = "<group>"; };
 		4AAA0E4F25DBFE680036F9CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MailStatusView.storyboard; sourceTree = "<group>"; };
+		4AD8EA1E25E65C94004DAC2E /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 		94FBC54F7BB9A1ABBA341BFD /* Pods_House.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_House.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADDF60EF25CA002B0010B290 /* House.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = House.entitlements; sourceTree = "<group>"; };
 		C60EEAF7C74B883F4865A91D /* Pods-House.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-House.debug.xcconfig"; path = "Target Support Files/Pods-House/Pods-House.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				1ADEFB4425BAD7170062BF4E /* BundleExtension.swift */,
 				1A00FF1A25A70E5300CC8AF6 /* Common.swift */,
 				1ADEFB2925BABC9D0062BF4E /* Localizable.strings */,
+				4AD8EA1E25E65C94004DAC2E /* SideMenu.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				1AAF8DEB25B70B39009A4070 /* MailStatusTableViewCell.swift in Sources */,
 				1ABB195E25C1725400BEA113 /* SideMenuController.swift in Sources */,
 				1A4DC23A25936E8300AD6D73 /* ViewController.swift in Sources */,
+				4AD8EA1F25E65C94004DAC2E /* SideMenu.swift in Sources */,
 				1AF6DD1C25B587380015EC4D /* MailStatusViewController.swift in Sources */,
 				1A1C22EC25A823E5004B3DF3 /* UserViewController.swift in Sources */,
 				38E71AA425DFA3C100B784EF /* SingleUserViewController.swift in Sources */,
