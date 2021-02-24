@@ -13,6 +13,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     private var storyboard = UIStoryboard()
     private var initialViewController = UIViewController()
+    let UserAPI = "UserAPI.php"
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let winscene = (scene as? UIWindowScene) else { return }
@@ -63,6 +64,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
+    
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        if let url = URLContexts.first?.url{
+            let urlString = url.absoluteString
+            let component = urlString.components(separatedBy: "=")
+            let id = component.last
+            let jsonParam: [String: Any] = ["ProcessName": "userUpdateVerifyFlg","id": id!]
+            Common.sharedInstance.RequestFromApi( api: self.UserAPI, jsonParams: jsonParam, completionHandler: {(result) -> Void in
+              
+           })
+        }
+    }
+    
     
 }
 

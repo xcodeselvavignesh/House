@@ -7,7 +7,7 @@ class Common {
     public static let sharedInstance = Common()
     //API
     let API = "HomeAPI.php"
-    public let REQUEST_URL =  "http://localhost/HouseManagement/api/"
+    public let REQUEST_URL =  "http://ssdev.microbit.co.jp/HouseManagement/api/"
     public let Date_Formatter = DateFormatter()
     public typealias CompletionHandler = (_ result: NSDictionary) -> Void
     public let DateFormat = "yyyy-MM-dd"
