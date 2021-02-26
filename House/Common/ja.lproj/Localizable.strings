@@ -22,3 +22,4 @@
 "Lbl_OK" = "Ok";
 "Lbl_Cancel" = "Cancel";
 "Lbl_NoDataFound" = "何もデータが見つかりませんでした";
+"Lbl_MailId" ="メールId";

@@ -29,7 +29,7 @@ class UserViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     private var searching = false
     private var dataJson = [ModelData]()
     private var sortingBtntext = "UserId"
-    private var sortingImg = "upArrow-20"
+    private var sortingImg = "downArrow-20"
     private var sortOrder = "DESC"
     private var id = "AMS0001"
     
@@ -91,10 +91,10 @@ class UserViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         }
         if sortOrder == "DESC" {
             sortOrder = "ASC"
-            sortingImg = "downArrow-20"
+            sortingImg = "upArrow-20"
         } else {
             sortOrder = "DESC"
-            sortingImg = "upArrow-20"
+            sortingImg = "downArrow-20"
         }
         sender.titleLabel?.text = ""
         stackview.removeArrangedSubview(sender)

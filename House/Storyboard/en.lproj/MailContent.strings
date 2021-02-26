@@ -1,0 +1,30 @@
+
+/* Class = "UILabel"; text = "|"; ObjectID = "6PR-YQ-AZm"; */
+"6PR-YQ-AZm.text" = "|";
+
+/* Class = "UIButton"; normalTitle = "MailId"; ObjectID = "CHE-NF-rdY"; */
+"CHE-NF-rdY.normalTitle" = "MailId";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "ID9-Id-bO2"; */
+"ID9-Id-bO2.normalTitle" = "MailReg";
+
+/* Class = "UIButton"; normalTitle = "Notuse"; ObjectID = "SQk-YM-lXw"; */
+"SQk-YM-lXw.normalTitle" = "Notuse";
+
+/* Class = "UIButton"; normalTitle = "MailName"; ObjectID = "jCB-H4-dFd"; */
+"jCB-H4-dFd.normalTitle" = "MailName";
+
+/* Class = "UILabel"; text = "|"; ObjectID = "kdS-uH-2Bl"; */
+"kdS-uH-2Bl.text" = "|";
+
+/* Class = "UISearchBar"; placeholder = "MailId (or) MailName"; ObjectID = "kn0-L5-dEL"; */
+"kn0-L5-dEL.placeholder" = "MailId (or) MailName";
+
+/* Class = "UILabel"; text = "Mail Content"; ObjectID = "rVU-47-2t0"; */
+"rVU-47-2t0.text" = "Mail Content";
+
+/* Class = "UIButton"; normalTitle = "All"; ObjectID = "sWn-5G-gs3"; */
+"sWn-5G-gs3.normalTitle" = "All";
+
+/* Class = "UIButton"; normalTitle = "Use"; ObjectID = "xLW-MV-ey1"; */
+"xLW-MV-ey1.normalTitle" = "Use";
