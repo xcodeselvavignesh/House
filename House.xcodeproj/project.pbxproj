@@ -20,7 +20,6 @@
 		1A4DC24225936E9C00AD6D73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4DC24025936E9C00AD6D73 /* LaunchScreen.storyboard */; };
 		1A5CDE7B25A5935000F2BCA5 /* Forgot_Password.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A5CDE7A25A5935000F2BCA5 /* Forgot_Password.storyboard */; };
 		1A7751E525B6CB6000C2CEFF /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7751E425B6CB6000C2CEFF /* ChangePasswordViewController.swift */; };
-		1A9183102595A67D00692172 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A91830F2595A67D00692172 /* Register.storyboard */; };
 		1A9183162595C77600692172 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A9183152595C77200692172 /* Assets.xcassets */; };
 		1AA45D6F25C199A40005B38C /* UserListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AA45D7125C199A40005B38C /* UserListTableViewCell.xib */; };
 		1AAF8DEB25B70B39009A4070 /* MailStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAF8DEA25B70B39009A4070 /* MailStatusTableViewCell.swift */; };
@@ -37,6 +36,7 @@
 		1AF6DD1C25B587380015EC4D /* MailStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF6DD1B25B587360015EC4D /* MailStatusViewController.swift */; };
 		1AF6DD1F25B588400015EC4D /* MailContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF6DD1E25B588400015EC4D /* MailContentViewController.swift */; };
 		32C0A37D5AE2124F3868A536 /* Pods_House.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94FBC54F7BB9A1ABBA341BFD /* Pods_House.framework */; };
+		3836588325F1134700D8D705 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3836588525F1134700D8D705 /* Register.storyboard */; };
 		38E71AA425DFA3C100B784EF /* SingleUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E71AA325DFA3C100B784EF /* SingleUserViewController.swift */; };
 		4A25667925E4DA9E00B778FD /* SingleUserView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A25667B25E4DA9E00B778FD /* SingleUserView.storyboard */; };
 		4A5A912525E7735B00D68C45 /* MailContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5A912325E7735B00D68C45 /* MailContentTableViewCell.swift */; };
@@ -65,7 +65,6 @@
 		1A4DC24325936E9C00AD6D73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A5CDE7A25A5935000F2BCA5 /* Forgot_Password.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Forgot_Password.storyboard; sourceTree = "<group>"; };
 		1A7751E425B6CB6000C2CEFF /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
-		1A91830F2595A67D00692172 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		1A9183152595C77200692172 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1AA45D7025C199A40005B38C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/UserListTableViewCell.xib; sourceTree = "<group>"; };
 		1AA45D7425C199AF0005B38C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/UserListTableViewCell.strings; sourceTree = "<group>"; };
@@ -96,6 +95,10 @@
 		1ADEFB4F25BAD8A10062BF4E /* HouseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseViewController.swift; sourceTree = "<group>"; };
 		1AF6DD1B25B587360015EC4D /* MailStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailStatusViewController.swift; sourceTree = "<group>"; };
 		1AF6DD1E25B588400015EC4D /* MailContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailContentViewController.swift; sourceTree = "<group>"; };
+		1AF6DD2125B58B1C0015EC4D /* MailContent.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MailContent.storyboard; sourceTree = "<group>"; };
+		3836588425F1134700D8D705 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Register.storyboard; sourceTree = "<group>"; };
+		3836588725F1135100D8D705 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Register.strings; sourceTree = "<group>"; };
+		3836588925F1144500D8D705 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Register.strings; sourceTree = "<group>"; };
 		38E71AA325DFA3C100B784EF /* SingleUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleUserViewController.swift; sourceTree = "<group>"; };
 		4A0D586F25DD0DBE009C88AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MailStatusView.strings; sourceTree = "<group>"; };
 		4A0D587225DD0DD0009C88AF /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MailStatusView.strings; sourceTree = "<group>"; };
@@ -212,7 +215,7 @@
 				1ADEFB3E25BABE470062BF4E /* Login.storyboard */,
 				1A4DC23B25936E8300AD6D73 /* Main.storyboard */,
 				1ADEFB3725BABD900062BF4E /* House.storyboard */,
-				1A91830F2595A67D00692172 /* Register.storyboard */,
+				3836588525F1134700D8D705 /* Register.storyboard */,
 				1A5CDE7A25A5935000F2BCA5 /* Forgot_Password.storyboard */,
 				1ABB198325C18C1700BEA113 /* UserIndex.storyboard */,
 				4AAA0E5025DBFE680036F9CF /* MailStatusView.storyboard */,
@@ -316,7 +319,7 @@
 				1A9183162595C77600692172 /* Assets.xcassets in Resources */,
 				4AB2C58125E8C99B00543629 /* MailContentTableViewCell.xib in Resources */,
 				1ABB198125C18C1700BEA113 /* UserIndex.storyboard in Resources */,
-				1A9183102595A67D00692172 /* Register.storyboard in Resources */,
+				3836588325F1134700D8D705 /* Register.storyboard in Resources */,
 				1ABB197725C17DC400BEA113 /* MailStatusTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,6 +492,16 @@
 				1ADEFB4325BABE680062BF4E /* ja */,
 			);
 			name = Login.storyboard;
+			sourceTree = "<group>";
+		};
+		3836588525F1134700D8D705 /* Register.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3836588425F1134700D8D705 /* Base */,
+				3836588725F1135100D8D705 /* en */,
+				3836588925F1144500D8D705 /* ja */,
+			);
+			name = Register.storyboard;
 			sourceTree = "<group>";
 		};
 		4A25667B25E4DA9E00B778FD /* SingleUserView.storyboard */ = {

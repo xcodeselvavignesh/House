@@ -1,16 +1,7 @@
-//
-//  SingleUserViewController.swift
-//  House
-//
-//  Created by kasthuri1994 on 18/2/21.
-//
-
 import UIKit
 
-
-class SingleUserViewController: UIViewController
-
-    {
+class SingleUserViewController: UIViewController {
+    
     private let API = "UserAPI.php"
     @IBOutlet weak var userId: UILabel!
     @IBOutlet weak var lastName: UILabel!
@@ -20,8 +11,12 @@ class SingleUserViewController: UIViewController
     @IBOutlet weak var email: UILabel!
     @IBOutlet weak var mobileNo: UILabel!
     @IBOutlet weak var userDataView: UIView!
+    @IBOutlet weak var pageTitle: UILabel!
+    @IBOutlet weak var userEditBtn: UIButton!
+    @IBOutlet weak var pageTitleImg: UIImageView!
     
     var id : String = ""
+    var headingTitle : String = ""
     var usrId : String = ""
     var fName : String = ""
     var lName : String = ""
@@ -34,6 +29,16 @@ class SingleUserViewController: UIViewController
         userDataView.layer.borderWidth = 3
         userDataView.layer.borderColor = UIColor.gray.cgColor
         self.getUserData()
+        if headingTitle != "" && id != "" {
+            
+            pageTitle?.text = "Profile"
+            let imageName = "profile-40.png"
+            pageTitleImg.image = UIImage(named: (imageName))
+            userEditBtn.backgroundColor = UIColor.orange
+        } else {
+            userEditBtn.isHidden = true
+            userEditBtn.heightAnchor.constraint(equalToConstant: 0).isActive = true
+        }
     }
     
     func getUserData() {
@@ -77,7 +82,8 @@ class SingleUserViewController: UIViewController
                }
            }
        })
-   }
+    }
+    
     func setElement() {
         userId.text = self.usrId
         firstName.text = self.fName
@@ -90,5 +96,12 @@ class SingleUserViewController: UIViewController
         dob.text = self.date
         email.text = self.mail
         mobileNo.text = self.mobNo
+    }
+   
+    @IBAction func userEdit(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Register", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "RegisterVC") as! RegisterViewController
+        vc.id = UserDefaults.standard.string(forKey: "UserID")!
+        self.present(vc, animated: true, completion: nil)
     }
 }

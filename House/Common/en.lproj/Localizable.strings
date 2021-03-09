@@ -21,4 +21,5 @@
 "Lbl_OK" = "はい";
 "Lbl_Cancel" = "いいえ";
 "Lbl_NoDataFound" = "No Records Found";
+"LblPassword" = "password";
 "Lbl_MailId" = "MailId";

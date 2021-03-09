@@ -1,0 +1,63 @@
+
+/* Class = "UILabel"; text = "Gender"; ObjectID = "0c8-hw-txk"; */
+"0c8-hw-txk.text" = "Gender";
+
+/* Class = "UILabel"; text = "*"; ObjectID = "176-fA-yVJ"; */
+"176-fA-yVJ.text" = "*";
+
+/* Class = "UILabel"; text = "Female"; ObjectID = "9oh-r8-qaa"; */
+"9oh-r8-qaa.text" = "Female";
+
+/* Class = "UILabel"; text = "*"; ObjectID = "A7W-oV-OgG"; */
+"A7W-oV-OgG.text" = "*";
+
+/* Class = "UILabel"; text = "C.Password"; ObjectID = "CNh-dH-hbc"; */
+"CNh-dH-hbc.text" = "C.Password";
+
+/* Class = "UILabel"; text = "DOB"; ObjectID = "EjU-6g-olN"; */
+"EjU-6g-olN.text" = "DOB";
+
+/* Class = "UILabel"; text = "Given Name"; ObjectID = "IHa-gn-nob"; */
+"IHa-gn-nob.text" = "Given Name";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "MbV-gP-2bi"; */
+"MbV-gP-2bi.normalTitle" = "Register";
+
+/* Class = "UILabel"; text = "*"; ObjectID = "NOZ-Ci-JGb"; */
+"NOZ-Ci-JGb.text" = "*";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "Rsl-qk-72a"; */
+"Rsl-qk-72a.text" = "Password";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "TMa-MN-chb"; */
+"TMa-MN-chb.text" = "Email";
+
+/* Class = "UILabel"; text = "*"; ObjectID = "TQj-07-Nks"; */
+"TQj-07-Nks.text" = "*";
+
+/* Class = "UILabel"; text = "*"; ObjectID = "U2W-Px-h6N"; */
+"U2W-Px-h6N.text" = "*";
+
+/* Class = "UILabel"; text = "*"; ObjectID = "VMO-fd-0f0"; */
+"VMO-fd-0f0.text" = "*";
+
+/* Class = "UILabel"; text = "*"; ObjectID = "Vec-Hy-deu"; */
+"Vec-Hy-deu.text" = "*";
+
+/* Class = "UILabel"; text = "User.Register"; ObjectID = "Viu-bl-BqB"; */
+"Viu-bl-BqB.text" = "User.Register";
+
+/* Class = "UILabel"; text = "Mobile.No"; ObjectID = "WKD-SS-zux"; */
+"WKD-SS-zux.text" = "Mobile.No";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "i7t-AX-U6S"; */
+"i7t-AX-U6S.normalTitle" = "Cancel";
+
+/* Class = "UILabel"; text = "*"; ObjectID = "jxX-7k-BMi"; */
+"jxX-7k-BMi.text" = "*";
+
+/* Class = "UILabel"; text = "Male"; ObjectID = "q29-Ha-dzQ"; */
+"q29-Ha-dzQ.text" = "Male";
+
+/* Class = "UILabel"; text = "Sur Name"; ObjectID = "wUY-eE-jy9"; */
+"wUY-eE-jy9.text" = "Sur Name";

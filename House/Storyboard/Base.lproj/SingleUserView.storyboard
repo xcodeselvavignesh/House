@@ -11,7 +11,7 @@
         <!--Single User View Controller-->
         <scene sceneID="sRL-Yz-CJd">
             <objects>
-                <viewController storyboardIdentifier="SingleUserViewVC" id="21t-TH-5t1" customClass="SingleUserViewController" customModule="House" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SingleUserViewVC" modalPresentationStyle="fullScreen" id="21t-TH-5t1" customClass="SingleUserViewController" customModule="House" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bM9-Sj-eRi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,8 +22,8 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list-40" translatesAutoresizingMaskIntoConstraints="NO" id="tVS-2R-gJw">
                                         <rect key="frame" x="0.0" y="15" width="40" height="40"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDX-Qr-B48">
-                                        <rect key="frame" x="55" y="17" width="130.5" height="36"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="User View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDX-Qr-B48">
+                                        <rect key="frame" x="55" y="24" width="130.5" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -39,7 +39,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lys-Uj-IyH">
-                                <rect key="frame" x="18" y="119" width="378" height="220"/>
+                                <rect key="frame" x="18" y="173" width="378" height="230"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Id" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXv-lv-cFy">
                                         <rect key="frame" x="8" y="7" width="98" height="21"/>
@@ -142,19 +142,33 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="220" id="jhu-Ps-P1X"/>
+                                    <constraint firstAttribute="height" constant="230" id="43D-0i-DCI"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMn-rH-Hi5">
+                                <rect key="frame" x="18" y="119" width="70" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="Egs-l2-2um"/>
+                                </constraints>
+                                <state key="normal" title="Edit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="userEdit:" destination="21t-TH-5t1" eventType="touchUpInside" id="aMv-az-eje"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="p2D-4W-ccD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="p2D-4W-ccD" firstAttribute="trailing" secondItem="vQl-us-FV9" secondAttribute="trailing" constant="18" id="40d-3g-PoR"/>
                             <constraint firstItem="vQl-us-FV9" firstAttribute="top" secondItem="p2D-4W-ccD" secondAttribute="top" id="8gf-HD-T6u"/>
-                            <constraint firstItem="p2D-4W-ccD" firstAttribute="trailing" secondItem="Lys-Uj-IyH" secondAttribute="trailing" constant="18" id="Hqo-sT-yHz"/>
+                            <constraint firstItem="Lys-Uj-IyH" firstAttribute="top" secondItem="wMn-rH-Hi5" secondAttribute="bottom" constant="20" id="Ieg-hi-12o"/>
+                            <constraint firstItem="wMn-rH-Hi5" firstAttribute="leading" secondItem="p2D-4W-ccD" secondAttribute="leading" constant="18" id="ItD-cT-1rs"/>
                             <constraint firstItem="vQl-us-FV9" firstAttribute="leading" secondItem="p2D-4W-ccD" secondAttribute="leading" constant="18" id="RQX-TQ-BLx"/>
-                            <constraint firstItem="Lys-Uj-IyH" firstAttribute="leading" secondItem="p2D-4W-ccD" secondAttribute="leading" constant="18" id="Wrz-hF-u98"/>
-                            <constraint firstItem="Lys-Uj-IyH" firstAttribute="top" secondItem="vQl-us-FV9" secondAttribute="bottom" constant="20" id="vIE-Wx-Eo5"/>
+                            <constraint firstItem="Lys-Uj-IyH" firstAttribute="leading" secondItem="p2D-4W-ccD" secondAttribute="leading" constant="18" id="W36-Sx-fi0"/>
+                            <constraint firstItem="wMn-rH-Hi5" firstAttribute="top" secondItem="vQl-us-FV9" secondAttribute="bottom" constant="20" id="jPh-Su-2Qo"/>
+                            <constraint firstItem="p2D-4W-ccD" firstAttribute="trailing" secondItem="Lys-Uj-IyH" secondAttribute="trailing" constant="18" id="ucD-VQ-hTT"/>
                         </constraints>
                     </view>
                     <connections>
@@ -164,7 +178,10 @@
                         <outlet property="gender" destination="V1Y-bq-Yeq" id="FUT-y1-fsi"/>
                         <outlet property="lastName" destination="LQu-w4-dan" id="XFb-t2-cEr"/>
                         <outlet property="mobileNo" destination="waA-fy-lWV" id="byw-LB-zzX"/>
+                        <outlet property="pageTitle" destination="vDX-Qr-B48" id="8jt-is-64y"/>
+                        <outlet property="pageTitleImg" destination="tVS-2R-gJw" id="Buf-Lh-Lfi"/>
                         <outlet property="userDataView" destination="Lys-Uj-IyH" id="vhM-Fg-G8H"/>
+                        <outlet property="userEditBtn" destination="wMn-rH-Hi5" id="7V2-Kd-8gC"/>
                         <outlet property="userId" destination="hIl-dq-tlT" id="hmU-Z8-CC5"/>
                     </connections>
                 </viewController>

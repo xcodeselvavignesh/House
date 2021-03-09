@@ -17,22 +17,131 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var TxtMobileNo: UITextField!
     @IBOutlet weak var Btn_Regiter: UIButton!
     @IBOutlet weak var Btn_Cancel: UIButton!
+    @IBOutlet weak var LblPassword: UILabel!
+    @IBOutlet weak var LblConfirmPassword: UILabel!
+    @IBOutlet weak var LblPWDMantadorySymbol: UILabel!
+    @IBOutlet weak var LblConfirmPwdMantadorySymbol: UILabel!
+    @IBOutlet weak var LblPageTitle: UILabel!
+    @IBOutlet weak var LblMobileNoMandatory: UILabel!
+    @IBOutlet weak var LblMobileNo: UILabel!
     
+    @IBOutlet weak var EditView: UIView!
     //Variables
     private  var gender = 1
+    var id : String = ""
+    var fName : String = ""
+    var lName : String = ""
+    var email : String = ""
+    var mobileNo : String = ""
+    var genderFlg = 1
+    var dob : String = ""
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if id != "" {
+            self.getUserData()
+            
+            
+            LblPassword.isHidden = true
+            
+            LblPWDMantadorySymbol.isHidden = true
+            
+            TxtPassword.isHidden = true
+            
+            LblConfirmPassword.isHidden = true
+            
+            TxtConfirmPassword.isHidden = true
+            
+            LblConfirmPwdMantadorySymbol.isHidden = true
+            
+            LblMobileNo.topAnchor.constraint(equalTo: LblPassword.topAnchor).isActive = true
+            
+            EditView.heightAnchor.constraint(equalToConstant: CGFloat(320)).isActive = true
+            
+            LblPageTitle?.text = "Profile . Edit"
+        }
+        
         self.setInitialProperties()
         self.datePicker.date = Calendar.current.date(byAdding: .year, value: -18, to: Date()) ?? Date()
         self.datePicker.maximumDate = Calendar.current.date(byAdding: .year, value: -18, to: Date()) ?? Date()
         self.datePicker.minimumDate = Calendar.current.date(byAdding: .year, value: -50, to: Date()) ?? Date()
     }
     
+    func getUserData() {
+        let jsonParam: [String: Any] = ["ProcessName": "userSingleView","id": id]
+        Common.sharedInstance.RequestFromApi( api: self.API, jsonParams: jsonParam, completionHandler: {(result) -> Void in
+            let msg = result["message"] as? Int
+            var key: String!
+            var dict = [String: Any]()
+            var sortedIndex = [String]()
+            if(msg == 0)
+            {
+                for obj in result {
+                    key = obj.key as? String
+                    if(key != "error" && key != "message") {
+                        sortedIndex.append(key)
+                    }
+                }
+                for index in sortedIndex.sorted() {
+                    dict = result[index] as! [String: Any]
+                    
+                    let firstName = dict["firstName"] as? String
+                    self.fName.append(firstName!)
+                    let lastName = dict["lastName"] as? String
+                    self.lName.append(lastName!)
+                    let gender = Int((dict["gender"] as? String)!)
+                    self.genderFlg = (gender)!
+                    let date =  dict["dob"] as? String
+                    self.dob.append(date!)
+                    let email = dict["email"] as? String
+                    self.email.append(email!)
+                    
+                    let mobileNo = dict["mobileNo"] as? String
+                    self.mobileNo.append(mobileNo!)
+                }
+                DispatchQueue.main.async {
+                    self.setElement()
+                }
+           }
+           else {
+               DispatchQueue.main.async {
+               }
+           }
+       })
+   }
+    
+    func setElement() {
+        TxtSurName.text = self.fName
+        TxtGivenName.text = self.lName
+        TxtEmailId.text = self.email
+        TxtMobileNo.text = self.mobileNo
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
+        dateFormatter.dateFormat = "yyyy-MM-dd'"
+        datePicker.date = dateFormatter.date(from:self.dob)!
+        if genderFlg == 1 {
+            BtnRadioMale.isSelected = true
+            BtnRadioFemale.isSelected = false
+            self.gender = 1
+        }
+        else if genderFlg == 2 {
+            BtnRadioMale.isSelected = false
+            BtnRadioFemale.isSelected = true
+            self.gender = 2
+        }
+       }
+    
     private func setInitialProperties() {
-        self.Btn_Regiter.backgroundColor = UIColor(red: 22/255, green: 160/255, blue: 134/255, alpha: 1)
-        self.Btn_Cancel.backgroundColor = UIColor(red: 201/255, green: 48/255, blue: 44/255, alpha: 1)
-        self.BtnRadioMale.isSelected = true
+        if id != "" {
+            self.Btn_Regiter.setAttributedTitle(NSAttributedString(string: "Update"), for: .normal)
+        } else {
+            self.Btn_Regiter.backgroundColor = UIColor(red: 22/255, green: 160/255, blue: 134/255, alpha: 1)
+            self.Btn_Cancel.backgroundColor = UIColor(red: 201/255, green: 48/255, blue: 44/255, alpha: 1)
+            self.BtnRadioMale.isSelected = true
+        }
+       
     }
     
     @IBAction func BtnRadio(_ sender: UIButton) {
@@ -53,17 +162,34 @@ class RegisterViewController: UIViewController {
         if(!self.regValidation()) {
             return
         }
-        let confirmationDialog = Common.DialogResult(title: "Confirmation", message: "Are you sure, you want to Register?")
-        let okClick = UIAlertAction(title: "Yes", style: .default, handler: { (alert) -> Void in
-            self.regProcess()
-        })
-        let cancelClick = UIAlertAction(title: "No", style: .cancel, handler: nil)
-        confirmationDialog.addAction(okClick)
-        confirmationDialog.addAction(cancelClick)
-        DispatchQueue.main.async {
-            self.present(confirmationDialog, animated: true, completion: nil)
+        if id != "" {
+            let confirmationDialog = Common.DialogResult(title: "Confirmation", message: "Are you sure, you want to Update?")
+            let okClick = UIAlertAction(title: "Yes", style: .default, handler: { (alert) -> Void in
+                self.updateProcess()
+            })
+            let cancelClick = UIAlertAction(title: "No", style: .cancel, handler: { (alert) -> Void in
+                self.updateProcess()
+            })
+            confirmationDialog.addAction(okClick)
+            confirmationDialog.addAction(cancelClick)
+            DispatchQueue.main.async {
+                self.present(confirmationDialog, animated: true, completion: nil)
+            }
+        } else {
+            let confirmationDialog = Common.DialogResult(title: "Confirmation", message: "Are you sure, you want to Register?")
+            let okClick = UIAlertAction(title: "Yes", style: .default, handler: { (alert) -> Void in
+                self.regProcess()
+            })
+            let cancelClick = UIAlertAction(title: "No", style: .cancel, handler: nil)
+            confirmationDialog.addAction(okClick)
+            confirmationDialog.addAction(cancelClick)
+            DispatchQueue.main.async {
+                self.present(confirmationDialog, animated: true, completion: nil)
+            }
         }
+       
     }
+    
     
     private func regValidation() -> Bool {
         var valid = true
@@ -90,22 +216,25 @@ class RegisterViewController: UIViewController {
                 Common.RemoveImageValidation(txtField: self.TxtEmailId)
             }
         }
-        if(self.TxtPassword.text!.isEmpty) {
-            Common.addImageValidation(txtField: self.TxtPassword,flg: 1)
-            valid = false
-        } else {
-            Common.RemoveImageValidation(txtField: self.TxtPassword)
-        }
-        if(self.TxtConfirmPassword.text!.isEmpty) {
-            Common.addImageValidation(txtField: self.TxtConfirmPassword,flg: 1)
-            valid = false
-        } else {
-            if(self.TxtPassword.text! != self.TxtConfirmPassword.text!) {
-                Common.addImageValidation(txtField: self.TxtConfirmPassword,flg: 2)
+        if id == "" {
+            if(self.TxtPassword.text!.isEmpty) {
+                Common.addImageValidation(txtField: self.TxtPassword,flg: 1)
                 valid = false
             } else {
-                Common.RemoveImageValidation(txtField: self.TxtConfirmPassword)
+                Common.RemoveImageValidation(txtField: self.TxtPassword)
             }
+            if(self.TxtConfirmPassword.text!.isEmpty) {
+                Common.addImageValidation(txtField: self.TxtConfirmPassword,flg: 1)
+                valid = false
+            } else {
+                if(self.TxtPassword.text! != self.TxtConfirmPassword.text!) {
+                    Common.addImageValidation(txtField: self.TxtConfirmPassword,flg: 2)
+                    valid = false
+                } else {
+                    Common.RemoveImageValidation(txtField: self.TxtConfirmPassword)
+                }
+            }
+            
         }
         if(self.TxtMobileNo.text!.isEmpty) {
             Common.addImageValidation(txtField: self.TxtMobileNo,flg: 1)
@@ -152,5 +281,59 @@ class RegisterViewController: UIViewController {
             }
         })
     }
+    
+    func updateProcess() {
+        let DOB = Common.sharedInstance.DateWitthFormat(dateFormat: Common.sharedInstance.DateFormat, date: self.datePicker.date)
+        let jsonParam: [String: Any] = ["ProcessName": "Update" , "userId": id,"SurName": self.TxtSurName.text!, "GivenName": self.TxtGivenName.text!, "DOB": DOB, "gender": self.gender, "EmailId": self.TxtEmailId.text!, "MobileNo": self.TxtMobileNo.text!]
+        Common.sharedInstance.RequestFromApi(api: self.API, jsonParams: jsonParam, completionHandler: {(result) -> Void in
+            let msg = result["message"] as? Int
+            var alertMessage: String!
+            var okClick = UIAlertAction()
+            var cancelClick = UIAlertAction()
+            
+            if(msg == 0) {
+                alertMessage = "Update succesfully"
+                okClick = UIAlertAction(title: "Ok", style: .default) { (alert: UIAlertAction!) -> Void in
+                }
+                cancelClick = UIAlertAction(title: "No", style: .default) { (alert: UIAlertAction!) -> Void in
+                    
+                }
+            }
+            else {
+                alertMessage = "User failed to Update"
+                okClick = (UIAlertAction(title: "Try Again", style: UIAlertAction.Style.default, handler: nil))
+            }
+            DispatchQueue.main.async {
+                let confirmationAlert = UIAlertController(title: "Alert", message: alertMessage, preferredStyle: .alert)
+                confirmationAlert.addAction(okClick)
+                confirmationAlert.addAction(cancelClick)
+                let storyboard = UIStoryboard(name: "SingleUserView", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "SingleUserViewVC") as! SingleUserViewController
+                vc.id = UserDefaults.standard.string(forKey: "UserID")!
+                vc.headingTitle = "profile"
+                self.present(vc, animated: true, completion: nil)
+            }
+        })
+    }
+    
+    @IBAction func cancelProcess(_ sender: Any) {
+        if id != "" {
+            
+            let storyboard = UIStoryboard(name: "SingleUserView", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "SingleUserViewVC") as! SingleUserViewController
+            vc.id = UserDefaults.standard.string(forKey: "UserID")!
+            vc.headingTitle = "profile"
+            self.navigationController?.popViewController(animated: true)
+            self.present(vc, animated: true, completion: nil)
+            
+        } else {
+            let storyboard = UIStoryboard(name: "Login", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "LoginVC") as! ViewController
+            self.navigationController?.popViewController(animated: true)
+            self.present(vc, animated: true, completion: nil)
+        }
+        
+    }
+    
 
 }
