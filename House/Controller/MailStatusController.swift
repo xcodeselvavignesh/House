@@ -38,7 +38,7 @@ class MailStatusController: UIViewController {
     }
 
     func mailStatusView() {
-        let jsonParam: [String: Any] = ["ProcessName": "mailStatusView", "MailEmail": self.mailEmail,"MailStatusUserName": self.mailStatusUserName]
+        let jsonParam: [String: Any] = ["ProcessName": "mailStatusView", "MailEmail": self.mailEmail]
         Common.sharedInstance.RequestFromApi( api: self.API, jsonParams: jsonParam, completionHandler: {(result) -> Void in
             let msg = result["message"] as? Int
             var key: String!
