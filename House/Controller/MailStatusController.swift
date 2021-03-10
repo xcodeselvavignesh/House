@@ -54,16 +54,16 @@ class MailStatusController: UIViewController {
                 }
                 for index in sortedIndex.sorted() {
                     dict = result[index] as! [String: Any]
-                    let msUserName = dict["createdBy"] as? String
-                    self.msUserName.append(msUserName!)
-                    let msMail = dict["toMail"] as? String
-                    self.msMail.append(msMail!)
-                    let msSubject = dict["subject"] as? String
-                    self.msSubject.append(msSubject!)
-                    let msSendDateTime = dict["createdDateTime"] as? String
-                    self.msSendDateTime.append(msSendDateTime!)
-                    let msContent = dict["content"] as? String
-                    self.msContent.append(msContent!)
+                    let username = dict["createdBy"] as? String
+                    self.msUserName.append(username!)
+                    let to = dict["toMail"] as? String
+                    self.msMail.append(to!)
+                    let subject = dict["subject"] as? String
+                    self.msSubject.append(subject!)
+                    let senddatetime = dict["createdDateTime"] as? String
+                    self.msSendDateTime.append(senddatetime!)
+                    let mailcontent = dict["content"] as? String
+                    self.msContent.append(mailcontent!)
                 }
                 DispatchQueue.main.async {
                     self.setElement()

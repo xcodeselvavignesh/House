@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -43,11 +43,11 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ID9-Id-bO2">
-                                <rect key="frame" x="13" y="118" width="90" height="35"/>
+                                <rect key="frame" x="13" y="118" width="120" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="0.79470198675496684" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="aKu-Hn-0Cc"/>
-                                    <constraint firstAttribute="width" constant="90" id="s2Y-ap-XVu"/>
+                                    <constraint firstAttribute="width" constant="120" id="s2Y-ap-XVu"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="MailReg">
@@ -58,7 +58,7 @@
                                 </connections>
                             </button>
                             <searchBar contentMode="redraw" placeholder="MailId (or) MailName" translatesAutoresizingMaskIntoConstraints="NO" id="kn0-L5-dEL">
-                                <rect key="frame" x="178" y="100" width="231" height="71"/>
+                                <rect key="frame" x="208" y="100" width="201" height="71"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dun-US-Iwq">
@@ -192,6 +192,7 @@
                         <outletCollection property="filterButton" destination="SQk-YM-lXw" collectionClass="NSMutableArray" id="Rxg-rI-vnk"/>
                         <outletCollection property="sortingBtn" destination="CHE-NF-rdY" collectionClass="NSMutableArray" id="Vy0-pe-cch"/>
                         <outletCollection property="sortingBtn" destination="jCB-H4-dFd" collectionClass="NSMutableArray" id="Uww-NY-0Xm"/>
+                        <segue destination="2bl-4A-MwG" kind="show" identifier="mailcontentSingleView" id="8VZ-GS-uuV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xDP-s5-q8r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -207,6 +208,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="res-Bf-IY0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="824" y="-67"/>
+        </scene>
+        <!--mailcontentSingleViewVC-->
+        <scene sceneID="pQQ-ZG-Ikb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MailContentSingleView" referencedIdentifier="mailcontentSingleViewVC" id="2bl-4A-MwG" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="cbi-Il-dKQ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hdc-PK-Aeo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="876" y="2"/>
         </scene>
     </scenes>
     <resources>

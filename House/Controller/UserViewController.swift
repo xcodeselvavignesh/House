@@ -44,7 +44,7 @@ class UserViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         tableView.delegate = self
         tableView.dataSource = self
         allBtn.setTitleColor(UIColor.gray, for: .normal)
-       
+        allBtn.isEnabled = false
         selectSortingBtn.setAttributedTitle(NSAttributedString(string: sortingBtntext), for: .normal)
         let img = UIImage(named: (sortingImg))
         selectSortingBtn.setImage(img, for: .normal)
@@ -134,9 +134,10 @@ class UserViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         self.dataOffset = 0
         for button in filterBtn {
             if sender.tag == button.tag {
-                button.isenabled = true
+                button.isEnabled = false
                 button.setTitleColor(UIColor.gray, for: .normal)
             } else {
+                button.isEnabled = true
                 button.setTitleColor(UIColor.systemBlue, for: .normal)
             }
         }
@@ -318,8 +319,14 @@ class UserViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 
 extension UserViewController:UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        searchedUser = dataJson.filter({$0.userId.uppercased().prefix(searchText.count) == searchText.uppercased() || $0.userName.uppercased().prefix(searchText.count) == searchText.uppercased()})
-        searching = true
-        self.tableView.reloadData()
+        if searchText == "" {
+            searching = false
+            view.endEditing(true)
+            tableView.reloadData()
+        } else {
+            searching = true
+            searchedUser = dataJson.filter({$0.userId.uppercased().contains(searchText.uppercased()) || $0.userName.uppercased().contains(searchText.uppercased()) })
+            tableView.reloadData()
+        }
     }
 }

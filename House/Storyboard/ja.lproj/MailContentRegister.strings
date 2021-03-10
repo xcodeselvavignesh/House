@@ -1,0 +1,35 @@
+/* Class = "UITextField"; text = "Dear"; ObjectID = "0RJ-dl-k1S"; */
+"0RJ-dl-k1S.text" = "Dear";
+
+/* Class = "UILabel"; text = "*"; ObjectID = "1jf-cL-qnk"; */
+"1jf-cL-qnk.text" = "*";
+
+/* Class = "UILabel"; text = "*"; ObjectID = "2h8-aX-xfE"; */
+"2h8-aX-xfE.text" = "*";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "3lM-IR-R2c"; */
+"3lM-IR-R2c.normalTitle" = "登録";
+
+/* Class = "UILabel"; text = "*"; ObjectID = "ChG-eO-Fy4"; */
+"ChG-eO-Fy4.text" = "*";
+
+/* Class = "UILabel"; text = "Mail Subject"; ObjectID = "Cz4-Uj-oxA"; */
+"Cz4-Uj-oxA.text" = "件名";
+
+/* Class = "UILabel"; text = "*"; ObjectID = "DrY-bC-Rpj"; */
+"DrY-bC-Rpj.text" = "*";
+
+/* Class = "UILabel"; text = "Mail Content . Register"; ObjectID = "Hxe-Ag-iwc"; */
+"Hxe-Ag-iwc.text" = "メール内容 . 登録";
+
+/* Class = "UILabel"; text = "Header"; ObjectID = "Opw-R4-qXB"; */
+"Opw-R4-qXB.text" = "ヘッダー";
+
+/* Class = "UILabel"; text = "Mail Name"; ObjectID = "hOI-aG-s8w"; */
+"hOI-aG-s8w.text" = "メール種類";
+
+/* Class = "UILabel"; text = "Content"; ObjectID = "jgS-tj-xIy"; */
+"jgS-tj-xIy.text" = "メール内容";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "kCk-Jg-79x"; */
+"kCk-Jg-79x.normalTitle" = "キャンセル";

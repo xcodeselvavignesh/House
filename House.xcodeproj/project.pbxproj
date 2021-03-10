@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		032965E325F8D58100B9ACC4 /* MailContentRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032965DF25F8D58100B9ACC4 /* MailContentRegister.storyboard */; };
+		032965E425F8D58100B9ACC4 /* MailContentSingleView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032965E125F8D58100B9ACC4 /* MailContentSingleView.storyboard */; };
+		032965F025F8D6E100B9ACC4 /* MailContentSingleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032965EF25F8D6E100B9ACC4 /* MailContentSingleViewController.swift */; };
 		1A00FF1125A6D22300CC8AF6 /* Forgot_PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A00FF1025A6D22300CC8AF6 /* Forgot_PasswordViewController.swift */; };
 		1A00FF1B25A70E5300CC8AF6 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A00FF1A25A70E5300CC8AF6 /* Common.swift */; };
 		1A1C22E325A821D3004B3DF3 /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1C22E225A821D3004B3DF3 /* UserListTableViewCell.swift */; };
@@ -45,11 +48,17 @@
 		4AB2C57825E8C70100543629 /* MailContent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AB2C57A25E8C70100543629 /* MailContent.storyboard */; };
 		4AB2C58125E8C99B00543629 /* MailContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AB2C58325E8C99B00543629 /* MailContentTableViewCell.xib */; };
 		4AB2C58D25E8EE9E00543629 /* MailContentRegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB2C58C25E8EE9E00543629 /* MailContentRegisterController.swift */; };
-		4AB2C59125E8F9C600543629 /* MailContentRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AB2C59025E8F9C600543629 /* MailContentRegister.storyboard */; };
 		4AD8EA1F25E65C94004DAC2E /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD8EA1E25E65C94004DAC2E /* SideMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		032965E025F8D58100B9ACC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MailContentRegister.storyboard; sourceTree = "<group>"; };
+		032965E225F8D58100B9ACC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MailContentSingleView.storyboard; sourceTree = "<group>"; };
+		032965EF25F8D6E100B9ACC4 /* MailContentSingleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailContentSingleViewController.swift; sourceTree = "<group>"; };
+		037F48D025F8D8D4007B6F77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MailContentSingleView.strings; sourceTree = "<group>"; };
+		037F48D225F8D8E5007B6F77 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MailContentSingleView.strings; sourceTree = "<group>"; };
+		037F48D425F8D8F9007B6F77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MailContentRegister.strings; sourceTree = "<group>"; };
+		037F48D625F8D8FB007B6F77 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MailContentRegister.strings; sourceTree = "<group>"; };
 		1A00FF1025A6D22300CC8AF6 /* Forgot_PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forgot_PasswordViewController.swift; sourceTree = "<group>"; };
 		1A00FF1A25A70E5300CC8AF6 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		1A1C22E225A821D3004B3DF3 /* UserListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListTableViewCell.swift; sourceTree = "<group>"; };
@@ -114,7 +123,6 @@
 		4AB2C58525E8C9C900543629 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MailContentTableViewCell.strings; sourceTree = "<group>"; };
 		4AB2C58725E8C9CE00543629 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MailContentTableViewCell.strings; sourceTree = "<group>"; };
 		4AB2C58C25E8EE9E00543629 /* MailContentRegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailContentRegisterController.swift; sourceTree = "<group>"; };
-		4AB2C59025E8F9C600543629 /* MailContentRegister.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MailContentRegister.storyboard; sourceTree = "<group>"; };
 		4AD8EA1E25E65C94004DAC2E /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 		94FBC54F7BB9A1ABBA341BFD /* Pods_House.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_House.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADDF60EF25CA002B0010B290 /* House.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = House.entitlements; sourceTree = "<group>"; };
@@ -182,6 +190,7 @@
 		1A4DC24A25936F0E00AD6D73 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				032965EF25F8D6E100B9ACC4 /* MailContentSingleViewController.swift */,
 				1ABB195D25C1725400BEA113 /* SideMenuController.swift */,
 				1ADEFB4F25BAD8A10062BF4E /* HouseViewController.swift */,
 				1AAF8DEA25B70B39009A4070 /* MailStatusTableViewCell.swift */,
@@ -207,6 +216,8 @@
 		1A4DC24B25936F2000AD6D73 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				032965DF25F8D58100B9ACC4 /* MailContentRegister.storyboard */,
+				032965E125F8D58100B9ACC4 /* MailContentSingleView.storyboard */,
 				1ABB197125C17D0100BEA113 /* MailStatusIndex.storyboard */,
 				1ADEFB2F25BABD090062BF4E /* Change_Password.storyboard */,
 				4AB2C57A25E8C70100543629 /* MailContent.storyboard */,
@@ -219,7 +230,6 @@
 				1ABB198325C18C1700BEA113 /* UserIndex.storyboard */,
 				4AAA0E5025DBFE680036F9CF /* MailStatusView.storyboard */,
 				4A25667B25E4DA9E00B778FD /* SingleUserView.storyboard */,
-				4AB2C59025E8F9C600543629 /* MailContentRegister.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -309,12 +319,13 @@
 				4AB2C57825E8C70100543629 /* MailContent.storyboard in Resources */,
 				1ABB196F25C17D0100BEA113 /* MailStatusIndex.storyboard in Resources */,
 				4A25667925E4DA9E00B778FD /* SingleUserView.storyboard in Resources */,
+				032965E325F8D58100B9ACC4 /* MailContentRegister.storyboard in Resources */,
+				032965E425F8D58100B9ACC4 /* MailContentSingleView.storyboard in Resources */,
 				1A5CDE7B25A5935000F2BCA5 /* Forgot_Password.storyboard in Resources */,
 				1AA45D6F25C199A40005B38C /* UserListTableViewCell.xib in Resources */,
 				1ADEFB3525BABD900062BF4E /* House.storyboard in Resources */,
 				1A2C228525B9AF9000F8433C /* fontawesome-webfont.ttf in Resources */,
 				1ADEFB2725BABC9D0062BF4E /* Localizable.strings in Resources */,
-				4AB2C59125E8F9C600543629 /* MailContentRegister.storyboard in Resources */,
 				1A9183162595C77600692172 /* Assets.xcassets in Resources */,
 				4AB2C58125E8C99B00543629 /* MailContentTableViewCell.xib in Resources */,
 				1ABB198125C18C1700BEA113 /* UserIndex.storyboard in Resources */,
@@ -381,6 +392,7 @@
 				1A1C22EC25A823E5004B3DF3 /* UserViewController.swift in Sources */,
 				38E71AA425DFA3C100B784EF /* SingleUserViewController.swift in Sources */,
 				1AF6DD1F25B588400015EC4D /* MailContentViewController.swift in Sources */,
+				032965F025F8D6E100B9ACC4 /* MailContentSingleViewController.swift in Sources */,
 				1ADEFB4525BAD7180062BF4E /* BundleExtension.swift in Sources */,
 				1A24EF7D259C980E00E57F4D /* RegisterViewController.swift in Sources */,
 				1A4DC23625936E8300AD6D73 /* AppDelegate.swift in Sources */,
@@ -398,6 +410,26 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		032965DF25F8D58100B9ACC4 /* MailContentRegister.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				032965E025F8D58100B9ACC4 /* Base */,
+				037F48D425F8D8F9007B6F77 /* en */,
+				037F48D625F8D8FB007B6F77 /* ja */,
+			);
+			name = MailContentRegister.storyboard;
+			sourceTree = "<group>";
+		};
+		032965E125F8D58100B9ACC4 /* MailContentSingleView.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				032965E225F8D58100B9ACC4 /* Base */,
+				037F48D025F8D8D4007B6F77 /* en */,
+				037F48D225F8D8E5007B6F77 /* ja */,
+			);
+			name = MailContentSingleView.storyboard;
+			sourceTree = "<group>";
+		};
 		1A4DC23B25936E8300AD6D73 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

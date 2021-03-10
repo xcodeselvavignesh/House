@@ -1,0 +1,33 @@
+
+/* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "0Lh-Nd-RHX"; */
+"0Lh-Nd-RHX.normalTitle" = "編集";
+
+/* Class = "UILabel"; text = "Mail Content . View"; ObjectID = "Hxe-Ag-iwc"; */
+"Hxe-Ag-iwc.text" = "メール登録 . 表示";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Hzk-ay-c5y"; */
+"Hzk-ay-c5y.text" = "Label";
+
+/* Class = "UILabel"; text = "Mail Name :"; ObjectID = "Khb-qD-Yhx"; */
+"Khb-qD-Yhx.text" = "メール種類 :";
+
+/* Class = "UILabel"; text = "Mail Id :"; ObjectID = "LMY-ny-O3b"; */
+"LMY-ny-O3b.text" = "メールId :";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "SS0-eW-W9j"; */
+"SS0-eW-W9j.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "YrG-hN-NVe"; */
+"YrG-hN-NVe.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Yrg-wg-LsT"; */
+"Yrg-wg-LsT.text" = "Label";
+
+/* Class = "UILabel"; text = "Content :"; ObjectID = "cT1-wQ-6Vf"; */
+"cT1-wQ-6Vf.text" = "メール内容 :";
+
+/* Class = "UILabel"; text = "Header :"; ObjectID = "v9Z-sR-rpU"; */
+"v9Z-sR-rpU.text" = "ヘッダー :";
+
+/* Class = "UILabel"; text = "Subject :"; ObjectID = "wUT-F7-Bxz"; */
+"wUT-F7-Bxz.text" = "件名 :";

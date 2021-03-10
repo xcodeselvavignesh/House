@@ -41,7 +41,14 @@ class MailContentViewController: UIViewController,UITableViewDelegate,UITableVie
         self.setTitleImage()
         self.MailContentList.showsVerticalScrollIndicator = false
         allBtn.setTitleColor(UIColor.gray, for: .normal)
+        allBtn.isEnabled = false
         mailButton.layer.cornerRadius = 3
+        let ultraLightConfiguration = UIImage.SymbolConfiguration(scale: .medium)
+        let ultraLightSymbolImage = UIImage(systemName: "plus", withConfiguration: ultraLightConfiguration)
+        let imagecolor = ultraLightSymbolImage?.withTintColor(.white,renderingMode: .alwaysOriginal)
+        mailButton.setImage(imagecolor, for: .normal)
+        mailButton.imageView?.contentMode = .scaleAspectFit
+        mailButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -5, bottom: 0, right: 0)
         let nib = UINib(nibName: "MailContentTableViewCell", bundle: nil)
         MailContentList.register(nib, forCellReuseIdentifier: "MailContentTableViewCell")
         MailContentList.delegate = self
@@ -153,8 +160,10 @@ class MailContentViewController: UIViewController,UITableViewDelegate,UITableVie
         self.dataOffset = 0
         for button in filterButton {
             if sender.tag == button.tag {
+                button.isEnabled = false
                 button.setTitleColor(UIColor.gray, for: .normal)
             } else {
+                button.isEnabled = true
                 button.setTitleColor(UIColor.systemBlue, for: .normal)
             }
         }
@@ -279,14 +288,30 @@ class MailContentViewController: UIViewController,UITableViewDelegate,UITableVie
             }
         }
     }
+    
     @objc func mailContentSingleView (sender: UIButton) {
-       
+        self.id = (sender.titleLabel?.text)!
+        performSegue(withIdentifier: "mailcontentSingleView", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let id = self.id
+        if segue.identifier == "mailcontentSingleView" {
+            let vc = segue.destination as! MailContentSingleViewController
+            vc.id = id
+        }
     }
 }
 extension MailContentViewController:UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        searchedMailContent = dataJson.filter({$0.mailcontentId.uppercased().prefix(searchText.count) == searchText.uppercased() || $0.mailcontentName.uppercased().prefix(searchText.count) == searchText.uppercased()})
-        searching = true
-        self.MailContentList.reloadData()
+        if searchText == "" {
+            searching = false
+            view.endEditing(true)
+            MailContentList.reloadData()
+        } else {
+            searching = true
+            searchedMailContent = dataJson.filter({$0.mailcontentId.uppercased().contains(searchText.uppercased()) || $0.mailcontentName.uppercased().contains(searchText.uppercased()) })
+            MailContentList.reloadData()
+        }
     }
 }
