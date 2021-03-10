@@ -134,6 +134,7 @@ class UserViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         self.dataOffset = 0
         for button in filterBtn {
             if sender.tag == button.tag {
+                button.isenabled = true
                 button.setTitleColor(UIColor.gray, for: .normal)
             } else {
                 button.setTitleColor(UIColor.systemBlue, for: .normal)
