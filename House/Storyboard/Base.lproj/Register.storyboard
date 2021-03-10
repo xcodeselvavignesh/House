@@ -442,7 +442,10 @@
                         <outlet property="LblPWDMantadorySymbol" destination="NOZ-Ci-JGb" id="yeR-BP-cWN"/>
                         <outlet property="LblPageTitle" destination="Viu-bl-BqB" id="tpo-gB-BSv"/>
                         <outlet property="LblPassword" destination="Rsl-qk-72a" id="7uk-Mc-wjD"/>
+                        <outlet property="LblSurName" destination="wUY-eE-jy9" id="M3V-RM-dDe"/>
                         <outlet property="LblUserId" destination="sI7-ek-e7j" id="IbP-FN-Nm7"/>
+                        <outlet property="LblUsrId" destination="lp3-6W-9n6" id="7v3-y0-qUR"/>
+                        <outlet property="LblUsrIdMantadorySymbol" destination="CJD-Ja-M4X" id="UNf-nP-j4p"/>
                         <outlet property="TxtConfirmPassword" destination="A4E-1t-PRR" id="OzR-TU-AJu"/>
                         <outlet property="TxtEmailId" destination="n0D-zX-ExJ" id="svY-dT-DVg"/>
                         <outlet property="TxtGivenName" destination="oW4-7C-9W3" id="MA2-de-BIf"/>

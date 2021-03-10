@@ -24,8 +24,11 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var LblPageTitle: UILabel!
     @IBOutlet weak var LblMobileNoMandatory: UILabel!
     @IBOutlet weak var LblMobileNo: UILabel!
-    
+    @IBOutlet weak var LblUsrId: UILabel!
     @IBOutlet weak var LblUserId: UILabel!
+    @IBOutlet weak var LblUsrIdMantadorySymbol: UILabel!
+    
+    @IBOutlet weak var LblSurName: UILabel!
     @IBOutlet weak var EditView: UIView!
     //Variables
     private  var gender = 1
@@ -61,6 +64,15 @@ class RegisterViewController: UIViewController {
             EditView.heightAnchor.constraint(equalToConstant: CGFloat(320)).isActive = true
             
             LblPageTitle?.text = "Profile . Edit"
+        } else {
+            
+            LblUsrId.isHidden = true
+            
+            LblUserId.isHidden = true
+            
+            LblUsrIdMantadorySymbol.isHidden = true
+            
+            LblSurName.topAnchor.constraint(equalTo: EditView.topAnchor).isActive = true
         }
         
         self.setInitialProperties()
@@ -320,6 +332,7 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func cancelProcess(_ sender: Any) {
+        
         if id != "" {
             
             let storyboard = UIStoryboard(name: "SingleUserView", bundle: nil)
