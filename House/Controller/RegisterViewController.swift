@@ -25,10 +25,12 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var LblMobileNoMandatory: UILabel!
     @IBOutlet weak var LblMobileNo: UILabel!
     
+    @IBOutlet weak var LblUserId: UILabel!
     @IBOutlet weak var EditView: UIView!
     //Variables
     private  var gender = 1
     var id : String = ""
+    var userId : String = ""
     var fName : String = ""
     var lName : String = ""
     var email : String = ""
@@ -41,7 +43,6 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         if id != "" {
             self.getUserData()
-            
             
             LblPassword.isHidden = true
             
@@ -85,7 +86,8 @@ class RegisterViewController: UIViewController {
                 }
                 for index in sortedIndex.sorted() {
                     dict = result[index] as! [String: Any]
-                    
+                    let usrid = dict["userId"] as? String
+                    self.userId.append(usrid!)
                     let firstName = dict["firstName"] as? String
                     self.fName.append(firstName!)
                     let lastName = dict["lastName"] as? String
@@ -112,6 +114,7 @@ class RegisterViewController: UIViewController {
    }
     
     func setElement() {
+        LblUserId.text = self.userId
         TxtSurName.text = self.fName
         TxtGivenName.text = self.lName
         TxtEmailId.text = self.email

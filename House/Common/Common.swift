@@ -41,6 +41,7 @@ class Common {
         let storyboard = UIStoryboard(name: "SingleUserView", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "SingleUserViewVC") as! SingleUserViewController
         vc.id = UserDefaults.standard.string(forKey: "UserID")!
+        vc.headingTitle = "Profile"
         return vc
     }()
     public func getAppLocale() -> String {
