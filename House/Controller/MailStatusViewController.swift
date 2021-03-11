@@ -6,7 +6,7 @@ class MailStatusViewController: UIViewController,UITableViewDelegate,UITableView
    let API = "MailStatusAPI.php"
    
    @IBOutlet weak var MailStatusList: UITableView!
-   
+    var id = [String]()
    var mailstsuserName = [String]()
    var mailstsEmail = [String]()
    var mailstsSubject = [String]()
@@ -46,7 +46,10 @@ class MailStatusViewController: UIViewController,UITableViewDelegate,UITableView
                 for index in sortedIndex.sorted() {
                     
                     dict = result[index] as! [String: Any]
-                    let username = dict["lastName"] as? String
+                    let id = dict["id"] as? String
+                    self.id.append(id!)
+                    
+                    let username = dict["createdBy"] as? String
                     self.mailstsuserName.append(username!)
                     
                     let email = dict["toMail"] as? String
@@ -103,7 +106,6 @@ class MailStatusViewController: UIViewController,UITableViewDelegate,UITableView
        cell.layer.borderColor = UIColor.black.cgColor
        cell.layer.borderWidth = 0.3
        cell.mailStatusUserName.tag = indexPath.row
-       cell.mailEmail.tag = indexPath.row
        cell.mailStatusUserName.setTitle(self.mailstsuserName[indexPath.row], for: .normal)
        cell.mailStatusUserName.addTarget(self, action: #selector(btnaction), for: .touchUpInside)
        cell.mailEmail.text = self.mailstsEmail[indexPath.row]
@@ -125,8 +127,7 @@ class MailStatusViewController: UIViewController,UITableViewDelegate,UITableView
    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "MailStatusViewSegue" {
             let vc = segue.destination as! MailStatusController
-            vc.mailStatusUserName = self.mailstsuserName[self.selectedIndexPath]
-            vc.mailEmail = self.mailstsEmail[self.selectedIndexPath]
+            vc.Id = self.id[self.selectedIndexPath]
             
         }
         

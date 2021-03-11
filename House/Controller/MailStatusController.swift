@@ -19,8 +19,7 @@ class MailStatusController: UIViewController {
     @IBOutlet weak var mailcontent: UITextView!
     
     @IBOutlet weak var msView: UIView!
-    var mailStatusUserName : String = ""
-    var mailEmail : String = ""
+    var Id : String = ""
     var msUserName : String = ""
     var msMail : String = ""
     var msSubject : String = ""
@@ -38,7 +37,7 @@ class MailStatusController: UIViewController {
     }
 
     func mailStatusView() {
-        let jsonParam: [String: Any] = ["ProcessName": "mailStatusView", "MailEmail": self.mailEmail]
+        let jsonParam: [String: Any] = ["ProcessName": "mailStatusView", "Id": self.Id]
         Common.sharedInstance.RequestFromApi( api: self.API, jsonParams: jsonParam, completionHandler: {(result) -> Void in
             let msg = result["message"] as? Int
             var key: String!
