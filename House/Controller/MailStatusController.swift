@@ -26,6 +26,11 @@ class MailStatusController: UIViewController {
     var msSendDateTime : String = ""
     var msContent : String = ""
     override func viewDidLoad() {
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 20))
+        imageView.contentMode = .scaleToFill
+        let image = UIImage(named: "Microbit_logo-40")
+        imageView.image  = image
+        self.navigationItem.titleView = imageView
         self.mailStatusView()
         let textView = UITextView()
         textView.textContainerInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)

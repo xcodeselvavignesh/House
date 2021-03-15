@@ -142,6 +142,9 @@
                                 <state key="normal" title="Edit">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="mailcontentEdit:" destination="PGi-ea-Gsg" eventType="touchUpInside" id="AUr-rs-RAp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rTT-0U-5Wz"/>
@@ -167,11 +170,22 @@
                         <outlet property="MailSubject" destination="Yrg-wg-LsT" id="yxr-ZS-9LA"/>
                         <outlet property="editButton" destination="0Lh-Nd-RHX" id="Lhz-jV-Luh"/>
                         <outlet property="mcView" destination="6qx-MP-YAw" id="u6d-Zv-hli"/>
+                        <segue destination="dFG-SU-2iY" kind="show" identifier="MailContentRegisterSegue" id="9ko-G7-hcS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mTf-t4-ALG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="282.60869565217394" y="33.482142857142854"/>
+        </scene>
+        <!--MailContentVC-->
+        <scene sceneID="5tQ-8p-x8O">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MailContentRegister" referencedIdentifier="MailContentVC" id="dFG-SU-2iY" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Kpo-BO-C9d"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VTr-Za-zng" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="791" y="-84"/>
         </scene>
     </scenes>
     <resources>

@@ -24,6 +24,11 @@ class MailContentSingleViewController: UIViewController {
     var mailheader : String = ""
     var mailcontent : String = ""
     override func viewDidLoad() {
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 20))
+        imageView.contentMode = .scaleToFill
+        let image = UIImage(named: "Microbit_logo-40")
+        imageView.image  = image
+        self.navigationItem.titleView = imageView
         let textView = UITextView()
         textView.textContainerInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         mcView.layer.masksToBounds = true
@@ -85,6 +90,17 @@ class MailContentSingleViewController: UIViewController {
         MailHeader.text = self.mailheader
         MailContent.attributedText = self.mailcontent.htmlAttributedString
         MailContent.font = UIFont.systemFont(ofSize: 16.0)
+    }
+    
+    @IBAction func mailcontentEdit(_ sender: Any) {
+        performSegue(withIdentifier: "MailContentRegisterSegue", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let id = self.mailid
+        if segue.identifier == "MailContentRegisterSegue" {
+            let vc = segue.destination as! MailContentRegisterController
+            vc.id = id
+        }
     }
 }
 extension String {

@@ -24,3 +24,7 @@
 "Lbl_NoDataFound" = "何もデータが見つかりませんでした";
 "LblPassword" = "PassWord";
 "Lbl_MailId" ="メールId";
+"Lbl_MailContentEdit" = "メール内容 . 編集";
+"Lbl_Update" = "更新";
+"Lbl_Registerconfirmmessage" = "登録しますか？";
+"Lbl_Updateconfirmmessage" = "更新しますか？";

@@ -58,7 +58,7 @@
                                 </connections>
                             </button>
                             <searchBar contentMode="redraw" placeholder="MailId (or) MailName" translatesAutoresizingMaskIntoConstraints="NO" id="kn0-L5-dEL">
-                                <rect key="frame" x="208" y="100" width="201" height="71"/>
+                                <rect key="frame" x="178" y="100" width="231" height="71"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dun-US-Iwq">
@@ -166,7 +166,7 @@
                             <constraint firstItem="RyE-dt-LSX" firstAttribute="top" secondItem="kn0-L5-dEL" secondAttribute="bottom" constant="4" id="GMs-2v-dxs"/>
                             <constraint firstItem="dun-US-Iwq" firstAttribute="leading" secondItem="e0s-CK-LZX" secondAttribute="leading" constant="9" id="MeH-Uf-KeF"/>
                             <constraint firstItem="Y0S-w3-6SA" firstAttribute="top" secondItem="e0s-CK-LZX" secondAttribute="top" id="SEG-wE-UcT"/>
-                            <constraint firstItem="kn0-L5-dEL" firstAttribute="leading" secondItem="ID9-Id-bO2" secondAttribute="trailing" constant="75" id="WPP-IT-LBz"/>
+                            <constraint firstItem="kn0-L5-dEL" firstAttribute="leading" secondItem="ID9-Id-bO2" secondAttribute="trailing" constant="45" id="WPP-IT-LBz"/>
                             <constraint firstItem="e0s-CK-LZX" firstAttribute="bottom" secondItem="V4S-Wf-oxL" secondAttribute="bottom" id="WoR-qg-aOB"/>
                             <constraint firstItem="V4S-Wf-oxL" firstAttribute="top" secondItem="Y0S-w3-6SA" secondAttribute="bottom" constant="125" id="Yit-Q3-bm9"/>
                             <constraint firstItem="e0s-CK-LZX" firstAttribute="trailing" secondItem="RyE-dt-LSX" secondAttribute="trailing" constant="13" id="bY5-4s-AmQ"/>
