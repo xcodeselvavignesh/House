@@ -21,9 +21,12 @@
 "Lbl_OK" = "はい";
 "Lbl_Cancel" = "いいえ";
 "Lbl_NoDataFound" = "No Records Found";
-"LblPassword" = "password";
+"Lbl_UserId" = "User ID";
 "Lbl_MailId" = "MailId";
 "Lbl_MailContentEdit" = "Mail Content . Edit";
 "Lbl_Update" = "Update";
 "Lbl_Registerconfirmmessage" = "Are you sure, you want to Register?";
 "Lbl_Updateconfirmmessage" = "Are you sure, you want to Update?";
+"Lbl_Profile" = "Profile";
+"Lbl_Edit" = "Edit";
+"Lbl_Profile_Edit" = "Profile・Edit";

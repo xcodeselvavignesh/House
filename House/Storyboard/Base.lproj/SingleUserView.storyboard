@@ -183,11 +183,22 @@
                         <outlet property="userDataView" destination="Lys-Uj-IyH" id="vhM-Fg-G8H"/>
                         <outlet property="userEditBtn" destination="wMn-rH-Hi5" id="7V2-Kd-8gC"/>
                         <outlet property="userId" destination="hIl-dq-tlT" id="hmU-Z8-CC5"/>
+                        <segue destination="mDt-Fi-bZ3" kind="show" identifier="GoEditPage" id="KmF-XJ-sxO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rph-dg-p2q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-339.13043478260875" y="25.446428571428569"/>
+        </scene>
+        <!--RegisterVC-->
+        <scene sceneID="EOd-2f-J5x">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Register" referencedIdentifier="RegisterVC" id="mDt-Fi-bZ3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="YY1-CN-2F9"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7MR-EY-MtM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="217" y="-105"/>
         </scene>
     </scenes>
     <resources>

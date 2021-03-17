@@ -1,36 +1,36 @@
 
 /* Class = "UILabel"; text = "Gender"; ObjectID = "0c8-hw-txk"; */
-"0c8-hw-txk.text" = "Gender";
+"0c8-hw-txk.text" = "性別";
 
 /* Class = "UILabel"; text = "*"; ObjectID = "176-fA-yVJ"; */
 "176-fA-yVJ.text" = "*";
 
 /* Class = "UILabel"; text = "Female"; ObjectID = "9oh-r8-qaa"; */
-"9oh-r8-qaa.text" = "Female";
+"9oh-r8-qaa.text" = "女性";
 
 /* Class = "UILabel"; text = "*"; ObjectID = "A7W-oV-OgG"; */
 "A7W-oV-OgG.text" = "*";
 
 /* Class = "UILabel"; text = "C.Password"; ObjectID = "CNh-dH-hbc"; */
-"CNh-dH-hbc.text" = "C.Password";
+"CNh-dH-hbc.text" = "確認パスワード";
 
 /* Class = "UILabel"; text = "DOB"; ObjectID = "EjU-6g-olN"; */
-"EjU-6g-olN.text" = "DOB";
+"EjU-6g-olN.text" = "生年月日";
 
 /* Class = "UILabel"; text = "Given Name"; ObjectID = "IHa-gn-nob"; */
-"IHa-gn-nob.text" = "Given Name";
+"IHa-gn-nob.text" = "名";
 
 /* Class = "UIButton"; normalTitle = "Register"; ObjectID = "MbV-gP-2bi"; */
-"MbV-gP-2bi.normalTitle" = "Register";
+"MbV-gP-2bi.normalTitle" = "登録";
 
 /* Class = "UILabel"; text = "*"; ObjectID = "NOZ-Ci-JGb"; */
 "NOZ-Ci-JGb.text" = "*";
 
 /* Class = "UILabel"; text = "Password"; ObjectID = "Rsl-qk-72a"; */
-"Rsl-qk-72a.text" = "Password";
+"Rsl-qk-72a.text" = "パスワード";
 
 /* Class = "UILabel"; text = "Email"; ObjectID = "TMa-MN-chb"; */
-"TMa-MN-chb.text" = "Email";
+"TMa-MN-chb.text" = "メール";
 
 /* Class = "UILabel"; text = "*"; ObjectID = "TQj-07-Nks"; */
 "TQj-07-Nks.text" = "*";
@@ -45,19 +45,19 @@
 "Vec-Hy-deu.text" = "*";
 
 /* Class = "UILabel"; text = "User.Register"; ObjectID = "Viu-bl-BqB"; */
-"Viu-bl-BqB.text" = "User.Register";
+"Viu-bl-BqB.text" = "ユーザ・登録";
 
 /* Class = "UILabel"; text = "Mobile.No"; ObjectID = "WKD-SS-zux"; */
-"WKD-SS-zux.text" = "Mobile.No";
+"WKD-SS-zux.text" = "携帯番号";
 
 /* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "i7t-AX-U6S"; */
-"i7t-AX-U6S.normalTitle" = "Cancel";
+"i7t-AX-U6S.normalTitle" = "キャンセル";
 
 /* Class = "UILabel"; text = "*"; ObjectID = "jxX-7k-BMi"; */
 "jxX-7k-BMi.text" = "*";
 
 /* Class = "UILabel"; text = "Male"; ObjectID = "q29-Ha-dzQ"; */
-"q29-Ha-dzQ.text" = "Male";
+"q29-Ha-dzQ.text" = "男性";
 
 /* Class = "UILabel"; text = "Sur Name"; ObjectID = "wUY-eE-jy9"; */
-"wUY-eE-jy9.text" = "Sur Name";
+"wUY-eE-jy9.text" = "姓";

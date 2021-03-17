@@ -27,7 +27,6 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var LblUsrId: UILabel!
     @IBOutlet weak var LblUserId: UILabel!
     @IBOutlet weak var LblUsrIdMantadorySymbol: UILabel!
-    
     @IBOutlet weak var LblSurName: UILabel!
     @IBOutlet weak var EditView: UIView!
     //Variables
@@ -40,6 +39,7 @@ class RegisterViewController: UIViewController {
     var mobileNo : String = ""
     var genderFlg = 1
     var dob : String = ""
+    private var Lbl_UserId = NSLocalizedString("Lbl_UserId", comment: "")
    
     
     override func viewDidLoad() {
@@ -74,7 +74,7 @@ class RegisterViewController: UIViewController {
             
             LblSurName.topAnchor.constraint(equalTo: EditView.topAnchor).isActive = true
         }
-        
+        LblUsrId?.text = Lbl_UserId
         self.setInitialProperties()
         self.datePicker.date = Calendar.current.date(byAdding: .year, value: -18, to: Date()) ?? Date()
         self.datePicker.maximumDate = Calendar.current.date(byAdding: .year, value: -18, to: Date()) ?? Date()
@@ -151,11 +151,31 @@ class RegisterViewController: UIViewController {
     private func setInitialProperties() {
         if id != "" {
             self.Btn_Regiter.setAttributedTitle(NSAttributedString(string: "Update"), for: .normal)
+            self.Btn_Regiter.layer.cornerRadius = 3
+            let ultraLightConfiguration = UIImage.SymbolConfiguration(scale: .medium)
+            let ultraLightSymbolImage = UIImage(systemName: "square.and.pencil", withConfiguration: ultraLightConfiguration)
+            let imagecolor = ultraLightSymbolImage?.withTintColor(.white,renderingMode: .alwaysOriginal)
+            self.Btn_Regiter.setImage(imagecolor, for: .normal)
+            self.Btn_Regiter.imageEdgeInsets = UIEdgeInsets(top: 0, left: -5, bottom: 0, right: 5)
         } else {
+            self.Btn_Regiter.layer.cornerRadius = 3
+            let ultraLightConfiguration = UIImage.SymbolConfiguration(scale: .medium)
+            let ultraLightSymbolImage = UIImage(systemName: "plus", withConfiguration: ultraLightConfiguration)
+            let imagecolor = ultraLightSymbolImage?.withTintColor(.white,renderingMode: .alwaysOriginal)
+            self.Btn_Regiter.setImage(imagecolor, for: .normal)
+            self.Btn_Regiter.imageEdgeInsets = UIEdgeInsets(top: 0, left: -5, bottom: 0, right: 5)
             self.Btn_Regiter.backgroundColor = UIColor(red: 22/255, green: 160/255, blue: 134/255, alpha: 1)
-            self.Btn_Cancel.backgroundColor = UIColor(red: 201/255, green: 48/255, blue: 44/255, alpha: 1)
             self.BtnRadioMale.isSelected = true
+           
         }
+        
+        self.Btn_Cancel.backgroundColor = UIColor(red: 201/255, green: 48/255, blue: 44/255, alpha: 1)
+        self.Btn_Cancel.layer.cornerRadius = 3
+        let ultraLightConfigurations = UIImage.SymbolConfiguration(scale: .medium)
+        let ultraLightSymbolImages = UIImage(systemName: "xmark", withConfiguration: ultraLightConfigurations)
+        let imagecolors = ultraLightSymbolImages?.withTintColor(.white,renderingMode: .alwaysOriginal)
+        self.Btn_Cancel.setImage(imagecolors, for: .normal)
+        self.Btn_Cancel.imageEdgeInsets = UIEdgeInsets(top: 0, left: -5, bottom: 0, right: 5)
        
     }
     
@@ -304,14 +324,10 @@ class RegisterViewController: UIViewController {
             let msg = result["message"] as? Int
             var alertMessage: String!
             var okClick = UIAlertAction()
-            var cancelClick = UIAlertAction()
-            
             if(msg == 0) {
                 alertMessage = "Update succesfully"
                 okClick = UIAlertAction(title: "Ok", style: .default) { (alert: UIAlertAction!) -> Void in
-                }
-                cancelClick = UIAlertAction(title: "No", style: .default) { (alert: UIAlertAction!) -> Void in
-                    
+                    self.navigationController?.popViewController(animated: true)
                 }
             }
             else {
@@ -321,35 +337,18 @@ class RegisterViewController: UIViewController {
             DispatchQueue.main.async {
                 let confirmationAlert = UIAlertController(title: "Alert", message: alertMessage, preferredStyle: .alert)
                 confirmationAlert.addAction(okClick)
-                confirmationAlert.addAction(cancelClick)
-                let storyboard = UIStoryboard(name: "SingleUserView", bundle: nil)
-                let vc = storyboard.instantiateViewController(withIdentifier: "SingleUserViewVC") as! SingleUserViewController
-                vc.id = UserDefaults.standard.string(forKey: "UserID")!
-                vc.headingTitle = "profile"
-                self.present(vc, animated: true, completion: nil)
+                self.present(confirmationAlert, animated: true, completion: nil)
+                
             }
         })
     }
     
     @IBAction func cancelProcess(_ sender: Any) {
-        
-        if id != "" {
-            
-            let storyboard = UIStoryboard(name: "SingleUserView", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "SingleUserViewVC") as! SingleUserViewController
-            vc.id = UserDefaults.standard.string(forKey: "UserID")!
-            vc.headingTitle = "profile"
+        if(id != "") {
             self.navigationController?.popViewController(animated: true)
-            self.present(vc, animated: true, completion: nil)
-            
         } else {
-            let storyboard = UIStoryboard(name: "Login", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "LoginVC") as! ViewController
-            self.navigationController?.popViewController(animated: true)
-            self.present(vc, animated: true, completion: nil)
+            performSegue(withIdentifier: "GoLoginPage", sender: self)
         }
         
     }
-    
-
 }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="In3-5M-40V">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="In3-5M-40V">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -454,6 +454,7 @@
                         <outlet property="TxtSurName" destination="R9C-ht-Yd3" id="qbr-uH-VwU"/>
                         <outlet property="datePicker" destination="48Y-de-9wZ" id="zs5-Kg-ret"/>
                         <segue destination="hdc-Ca-jsf" kind="show" identifier="RegproSegue" id="4cX-Dz-FZa"/>
+                        <segue destination="HeQ-1X-2BN" kind="show" identifier="GoLoginPage" id="R6b-Mx-3iK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iLQ-d7-rNo" sceneMemberID="firstResponder"/>
@@ -469,6 +470,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fax-es-5mX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="643" y="0.0"/>
+        </scene>
+        <!--LoginVC-->
+        <scene sceneID="x16-l6-PCb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" referencedIdentifier="LoginVC" id="HeQ-1X-2BN" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="TT3-59-dqy"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Nt-5I-JYb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="657" y="151"/>
         </scene>
     </scenes>
     <resources>

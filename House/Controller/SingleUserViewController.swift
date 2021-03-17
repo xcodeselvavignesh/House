@@ -24,17 +24,26 @@ class SingleUserViewController: UIViewController {
     var mail : String = ""
     var mobNo : String = ""
     var genderFlg = 1
+    private var Lbl_Profile = NSLocalizedString("Lbl_Profile", comment: "")
+    private var Lbl_Edit = NSLocalizedString("Lbl_Edit", comment: "")
     
     override func viewDidLoad() {
         userDataView.layer.borderWidth = 3
         userDataView.layer.borderColor = UIColor.gray.cgColor
         self.getUserData()
         if headingTitle != "" && id != "" {
-            
-            pageTitle?.text = "Profile"
+            userEditBtn.setAttributedTitle(NSAttributedString(string: Lbl_Edit), for: .normal)
+            pageTitle?.text = self.Lbl_Profile
             let imageName = "profile-40.png"
             pageTitleImg.image = UIImage(named: (imageName))
+            userEditBtn.layer.cornerRadius = 3
             userEditBtn.backgroundColor = UIColor.orange
+            let ultraLightConfiguration = UIImage.SymbolConfiguration(scale: .medium)
+            let ultraLightSymbolImage = UIImage(systemName: "square.and.pencil", withConfiguration: ultraLightConfiguration)
+            let imagecolor = ultraLightSymbolImage?.withTintColor(.white,renderingMode: .alwaysOriginal)
+            userEditBtn.setImage(imagecolor, for: .normal)
+            userEditBtn.imageView?.contentMode = .scaleAspectFit
+            userEditBtn.imageEdgeInsets = UIEdgeInsets(top: 0, left: -5, bottom: 0, right: 0)
         } else {
             userEditBtn.isHidden = true
             userEditBtn.heightAnchor.constraint(equalToConstant: 0).isActive = true
@@ -99,9 +108,14 @@ class SingleUserViewController: UIViewController {
     }
    
     @IBAction func userEdit(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Register", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "RegisterVC") as! RegisterViewController
-        vc.id = UserDefaults.standard.string(forKey: "UserID")!
-        self.present(vc, animated: true, completion: nil)
+        self.performSegue(withIdentifier: "GoEditPage", sender: self)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "GoEditPage" {
+            let vc = segue.destination as! RegisterViewController
+            vc.id = UserDefaults.standard.string(forKey: "UserID")!
+        }
+    }
+   
 }
