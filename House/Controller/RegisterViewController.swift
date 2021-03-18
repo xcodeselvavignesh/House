@@ -44,6 +44,8 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        EditView.layer.borderWidth = 3
+        EditView.layer.borderColor = UIColor.gray.cgColor
         if id != "" {
             self.getUserData()
             
@@ -61,9 +63,9 @@ class RegisterViewController: UIViewController {
             
             LblMobileNo.topAnchor.constraint(equalTo: LblPassword.topAnchor).isActive = true
             
-            EditView.heightAnchor.constraint(equalToConstant: CGFloat(320)).isActive = true
+            EditView.heightAnchor.constraint(equalToConstant: CGFloat(300)).isActive = true
             
-            LblPageTitle?.text = "Profile . Edit"
+            LblPageTitle?.text = NSLocalizedString("Lbl_Profile_Edit", comment: "")
         } else {
             
             LblUsrId.isHidden = true
@@ -72,7 +74,9 @@ class RegisterViewController: UIViewController {
             
             LblUsrIdMantadorySymbol.isHidden = true
             
-            LblSurName.topAnchor.constraint(equalTo: EditView.topAnchor).isActive = true
+            LblSurName.topAnchor.constraint(equalTo: LblUsrId.topAnchor, constant: CGFloat(1)).isActive = true
+            
+            EditView.heightAnchor.constraint(equalToConstant: CGFloat(340)).isActive = true
         }
         LblUsrId?.text = Lbl_UserId
         self.setInitialProperties()
@@ -133,7 +137,7 @@ class RegisterViewController: UIViewController {
         TxtMobileNo.text = self.mobileNo
         
         let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         dateFormatter.dateFormat = "yyyy-MM-dd'"
         datePicker.date = dateFormatter.date(from:self.dob)!
         if genderFlg == 1 {
@@ -150,13 +154,18 @@ class RegisterViewController: UIViewController {
     
     private func setInitialProperties() {
         if id != "" {
-            self.Btn_Regiter.setAttributedTitle(NSAttributedString(string: "Update"), for: .normal)
+            self.Btn_Regiter.setAttributedTitle(NSAttributedString(string: NSLocalizedString("Lbl_Update", comment: "")), for: .normal)
             self.Btn_Regiter.layer.cornerRadius = 3
             let ultraLightConfiguration = UIImage.SymbolConfiguration(scale: .medium)
             let ultraLightSymbolImage = UIImage(systemName: "square.and.pencil", withConfiguration: ultraLightConfiguration)
             let imagecolor = ultraLightSymbolImage?.withTintColor(.white,renderingMode: .alwaysOriginal)
             self.Btn_Regiter.setImage(imagecolor, for: .normal)
             self.Btn_Regiter.imageEdgeInsets = UIEdgeInsets(top: 0, left: -5, bottom: 0, right: 5)
+            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 20))
+            imageView.contentMode = .scaleToFill
+            let image = UIImage(named: "Microbit_logo-40")
+            imageView.image  = image
+            self.navigationItem.titleView = imageView
         } else {
             self.Btn_Regiter.layer.cornerRadius = 3
             let ultraLightConfiguration = UIImage.SymbolConfiguration(scale: .medium)
@@ -198,7 +207,7 @@ class RegisterViewController: UIViewController {
             return
         }
         if id != "" {
-            let confirmationDialog = Common.DialogResult(title: "Confirmation", message: "Are you sure, you want to Update?")
+            let confirmationDialog = Common.DialogResult(title: "Confirmation", message: NSLocalizedString("Lbl_Updateconfirmmessage", comment: ""))
             let okClick = UIAlertAction(title: "Yes", style: .default, handler: { (alert) -> Void in
                 self.updateProcess()
             })
@@ -211,7 +220,7 @@ class RegisterViewController: UIViewController {
                 self.present(confirmationDialog, animated: true, completion: nil)
             }
         } else {
-            let confirmationDialog = Common.DialogResult(title: "Confirmation", message: "Are you sure, you want to Register?")
+            let confirmationDialog = Common.DialogResult(title: "Confirmation", message: NSLocalizedString("Lbl_Registerconfirmmessage", comment: ""))
             let okClick = UIAlertAction(title: "Yes", style: .default, handler: { (alert) -> Void in
                 self.regProcess()
             })

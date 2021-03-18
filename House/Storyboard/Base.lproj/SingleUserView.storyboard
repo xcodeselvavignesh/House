@@ -39,7 +39,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lys-Uj-IyH">
-                                <rect key="frame" x="18" y="173" width="378" height="230"/>
+                                <rect key="frame" x="18" y="179" width="378" height="230"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Id" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXv-lv-cFy">
                                         <rect key="frame" x="8" y="7" width="98" height="21"/>
@@ -146,9 +146,10 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMn-rH-Hi5">
-                                <rect key="frame" x="18" y="119" width="70" height="34"/>
+                                <rect key="frame" x="18" y="119" width="70" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="Egs-l2-2um"/>
+                                    <constraint firstAttribute="height" constant="40" id="uF9-D9-jgG"/>
                                 </constraints>
                                 <state key="normal" title="Edit">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -47,6 +47,11 @@ class SingleUserViewController: UIViewController {
         } else {
             userEditBtn.isHidden = true
             userEditBtn.heightAnchor.constraint(equalToConstant: 0).isActive = true
+            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 20))
+            imageView.contentMode = .scaleToFill
+            let image = UIImage(named: "Microbit_logo-40")
+            imageView.image  = image
+            self.navigationItem.titleView = imageView
         }
     }
     
