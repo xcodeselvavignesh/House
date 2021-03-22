@@ -30,3 +30,6 @@
 "Lbl_Profile" = "Profile";
 "Lbl_Edit" = "Edit";
 "Lbl_Profile_Edit" = "Profile・Edit";
+"Lbl_Use" = "Use";
+"Lbl_NotUse" = "Notuse";
+"Lbl_UseNotuseconfirmmessage" = "Do You Want To Change Flg?";

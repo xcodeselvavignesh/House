@@ -5,6 +5,7 @@ struct MailData {
     var mailcontentId: String
     var mailcontentName: String
     var mailcontentSubject: String
+    var mailcontentFlg: Int
 }
 
 
@@ -36,6 +37,8 @@ class MailContentViewController: UIViewController,UITableViewDelegate,UITableVie
     private var sortingImg = "downArrow-20"
     private var sortOrder = "DESC"
     private var id = "MAIL0001"
+    var selectedIndexPath: Int!
+    var mailcontentMailid = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setTitleImage()
@@ -202,8 +205,10 @@ class MailContentViewController: UIViewController,UITableViewDelegate,UITableVie
                     let mailId = dict["mailId"] as? String
                     let mailName = dict["mailName"] as? String
                     let subject = dict["subject"] as? String
-                    let data = MailData(mailcontentId: mailId!, mailcontentName: mailName!, mailcontentSubject: subject!)
+                    let mailFlg = Int((dict["delFlg"] as? String)!)
+                    let data = MailData(mailcontentId: mailId!, mailcontentName: mailName!, mailcontentSubject: subject!, mailcontentFlg: mailFlg!)
                     self.dataJson.append(data)
+
                 }
                 DispatchQueue.main.async {
                     self.MailContentList.reloadData()
@@ -262,16 +267,96 @@ class MailContentViewController: UIViewController,UITableViewDelegate,UITableVie
         cell.mailcontentId.addTarget(self, action: #selector(self.mailContentSingleView(sender:)), for: .touchUpInside)
         cell.mailcontentName.text = MailContentData.mailcontentName
         cell.mailcontentSubject.text = MailContentData.mailcontentSubject
+        cell.mailcontentFlg.tag = indexPath.row
+        cell.mailcontentFlgs.tag = indexPath.row
+        if MailContentData.mailcontentFlg == 0 {
+            cell.mailcontentFlg.isHidden = true
+            cell.mailcontentFlgs.isHidden = false
+            let useFlg = NSLocalizedString("Lbl_Use", comment: "")
+            cell.mailcontentFlgs.setAttributedTitle(NSAttributedString(string: useFlg,attributes: [NSAttributedString.Key.foregroundColor : UIColor.blue]), for: .normal)
+            cell.mailcontentFlgs.addTarget(self, action: #selector(mailContentuseChangeFlg), for: .touchUpInside)
+           
+        } else {
+            cell.mailcontentFlgs.isHidden = true
+            cell.mailcontentFlg.isHidden = false
+            let notuseFlg = NSLocalizedString("Lbl_NotUse", comment: "")
+            cell.mailcontentFlg.setAttributedTitle(NSAttributedString(string: notuseFlg,attributes: [NSAttributedString.Key.foregroundColor : UIColor.red]), for: .normal)
+            cell.mailcontentFlg.addTarget(self, action: #selector(mailContentnotuseChangeFlg), for: .touchUpInside)
+        }
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return 125
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath){
         if (indexPath.row % 2 == 0) {
             cell.backgroundColor = UIColor.white
         } else {
             cell.backgroundColor =  UIColor(red: 1.00, green: 0.94, blue: 0.91, alpha: 1.00)
+        }
+    }
+    @objc func mailContentuseChangeFlg (sender: UIButton) {
+        self.selectedIndexPath = sender.tag
+        let indexPath = IndexPath(row: selectedIndexPath, section: 0)
+        var MailContentData = dataJson[indexPath.row]
+        if searching {
+            MailContentData = searchedMailContent[indexPath.row]
+        } else {
+            MailContentData = dataJson[indexPath.row]
+        }
+        let mailcontentMailid = MailContentData.mailcontentId
+        let confirmationDialog = Common.DialogResult(title: "Confirmation", message: NSLocalizedString("Lbl_UseNotuseconfirmmessage", comment: ""))
+        let okClick = UIAlertAction(title: "Yes", style: .default, handler: { (alert) -> Void in
+            self.dataJson.removeAll()
+            self.MailContentList.reloadData()
+            self.searching = false
+            self.searchBar.text = ""
+            let jsonParam: [String: Any] = ["ProcessName": "mailcontentFlg" , "MailId": mailcontentMailid, "MailDelFlg": 1]
+            Common.sharedInstance.RequestFromApi(api: self.API, jsonParams: jsonParam, completionHandler: {(result) -> Void in
+                self.dataOffset = 0
+                self.getMailList()
+                DispatchQueue.main.async {
+                    self.MailContentList.reloadData()
+                }
+            })
+        })
+        let cancelClick = UIAlertAction(title: "No", style: .cancel, handler: nil)
+        confirmationDialog.addAction(okClick)
+        confirmationDialog.addAction(cancelClick)
+        DispatchQueue.main.async {
+            self.present(confirmationDialog, animated: true, completion: nil)
+        }
+    }
+    @objc func mailContentnotuseChangeFlg (sender: UIButton) {
+        self.selectedIndexPath = sender.tag
+        let indexPath = IndexPath(row: selectedIndexPath, section: 0)
+        var MailContentData = dataJson[indexPath.row]
+        if searching {
+            MailContentData = searchedMailContent[indexPath.row]
+        } else {
+            MailContentData = dataJson[indexPath.row]
+        }
+        let mailcontentMailid = MailContentData.mailcontentId
+        let confirmationDialog = Common.DialogResult(title: "Confirmation", message: NSLocalizedString("Lbl_UseNotuseconfirmmessage", comment: ""))
+        let okClick = UIAlertAction(title: "Yes", style: .default, handler: { (alert) -> Void in
+            self.dataJson.removeAll()
+            self.MailContentList.reloadData()
+            self.searching = false
+            self.searchBar.text = ""
+            let jsonParam: [String: Any] = ["ProcessName": "mailcontentFlg" , "MailId": mailcontentMailid, "MailDelFlg": 0]
+            Common.sharedInstance.RequestFromApi(api: self.API, jsonParams: jsonParam, completionHandler: {(result) -> Void in
+                self.dataOffset = 0
+                self.getMailList()
+                DispatchQueue.main.async {
+                    self.MailContentList.reloadData()
+                }
+            })
+        })
+        let cancelClick = UIAlertAction(title: "No", style: .cancel, handler: nil)
+        confirmationDialog.addAction(okClick)
+        confirmationDialog.addAction(cancelClick)
+        DispatchQueue.main.async {
+            self.present(confirmationDialog, animated: true, completion: nil)
         }
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

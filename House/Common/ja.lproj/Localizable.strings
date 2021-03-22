@@ -31,3 +31,6 @@
 "Lbl_Profile" = "プロフィール";
 "Lbl_Edit" = "編集";
 "Lbl_Profile_Edit" = "プロフィール・編集";
+"Lbl_Use" = "利用";
+"Lbl_NotUse" = "未使用";
+"Lbl_UseNotuseconfirmmessage" = "Do You Want To Change Flg?";

@@ -13,6 +13,11 @@ class MailContentTableViewCell: UITableViewCell {
     @IBOutlet weak var mailcontentName: UILabel!
     
     @IBOutlet weak var mailcontentSubject: UILabel!
+    
+    @IBOutlet weak var mailcontentFlgs: UIButton!
+    
+    @IBOutlet weak var mailcontentFlg: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
