@@ -29,6 +29,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var LblUsrIdMantadorySymbol: UILabel!
     @IBOutlet weak var LblSurName: UILabel!
     @IBOutlet weak var EditView: UIView!
+    @IBOutlet weak var LblSurNameMandatorySymbol: UILabel!
     //Variables
     private  var gender = 1
     var id : String = ""
@@ -63,20 +64,20 @@ class RegisterViewController: UIViewController {
             
             LblMobileNo.topAnchor.constraint(equalTo: LblPassword.topAnchor).isActive = true
             
-            EditView.heightAnchor.constraint(equalToConstant: CGFloat(300)).isActive = true
+         //   EditView.heightAnchor.constraint(equalToConstant: CGFloat(300)).isActive = true
+            
+            LblMobileNoMandatory.topAnchor.constraint(equalTo: LblPWDMantadorySymbol.topAnchor).isActive = true
+            
             
             LblPageTitle?.text = NSLocalizedString("Lbl_Profile_Edit", comment: "")
+            Btn_Regiter.backgroundColor = UIColor.orange
         } else {
             
             LblUsrId.isHidden = true
             
             LblUserId.isHidden = true
-            
-            LblUsrIdMantadorySymbol.isHidden = true
-            
-            LblSurName.topAnchor.constraint(equalTo: LblUsrId.topAnchor, constant: CGFloat(1)).isActive = true
-            
-            EditView.heightAnchor.constraint(equalToConstant: CGFloat(340)).isActive = true
+           
+            LblSurName.topAnchor.constraint(equalTo: LblUsrId.topAnchor).isActive = true
         }
         LblUsrId?.text = Lbl_UserId
         self.setInitialProperties()
