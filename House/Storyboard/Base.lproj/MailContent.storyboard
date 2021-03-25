@@ -24,17 +24,17 @@
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Mail Content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rVU-47-2t0">
                                         <rect key="frame" x="58" y="18" width="235" height="35"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="rVU-47-2t0" firstAttribute="centerY" secondItem="Hyf-XS-tbV" secondAttribute="centerY" id="0wQ-Yn-wM6"/>
                                     <constraint firstItem="Hyf-XS-tbV" firstAttribute="top" secondItem="Y0S-w3-6SA" secondAttribute="top" constant="15" id="8w2-dz-Xdj"/>
                                     <constraint firstAttribute="bottom" secondItem="Hyf-XS-tbV" secondAttribute="bottom" id="K6y-gR-23C"/>
-                                    <constraint firstItem="rVU-47-2t0" firstAttribute="leading" secondItem="Hyf-XS-tbV" secondAttribute="trailing" constant="18" id="R9e-p7-1aP"/>
+                                    <constraint firstItem="rVU-47-2t0" firstAttribute="leading" secondItem="Hyf-XS-tbV" secondAttribute="trailing" constant="13" id="R9e-p7-1aP"/>
+                                    <constraint firstItem="rVU-47-2t0" firstAttribute="centerY" secondItem="Hyf-XS-tbV" secondAttribute="centerY" id="l7I-nc-bgY"/>
                                     <constraint firstItem="Hyf-XS-tbV" firstAttribute="leading" secondItem="Y0S-w3-6SA" secondAttribute="leading" id="qAo-U6-V3C"/>
                                 </constraints>
                             </view>
@@ -57,15 +57,15 @@
                                     <segue destination="JOd-5x-FXc" kind="show" id="KqK-LX-DZi"/>
                                 </connections>
                             </button>
-                            <searchBar contentMode="redraw" placeholder="MailId (or) MailName" translatesAutoresizingMaskIntoConstraints="NO" id="kn0-L5-dEL">
+                            <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="kn0-L5-dEL">
                                 <rect key="frame" x="178" y="100" width="231" height="71"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dun-US-Iwq">
-                                <rect key="frame" x="9" y="175" width="164" height="34"/>
+                                <rect key="frame" x="8" y="175" width="165" height="34"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWn-5G-gs3">
-                                        <rect key="frame" x="-7" y="3" width="40" height="29"/>
+                                        <rect key="frame" x="-1" y="3" width="29" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="All"/>
@@ -164,7 +164,7 @@
                             <constraint firstItem="ID9-Id-bO2" firstAttribute="leading" secondItem="e0s-CK-LZX" secondAttribute="leading" constant="13" id="DM0-96-VMQ"/>
                             <constraint firstItem="RyE-dt-LSX" firstAttribute="leading" secondItem="dun-US-Iwq" secondAttribute="trailing" constant="108" id="G0X-0p-rIt"/>
                             <constraint firstItem="RyE-dt-LSX" firstAttribute="top" secondItem="kn0-L5-dEL" secondAttribute="bottom" constant="4" id="GMs-2v-dxs"/>
-                            <constraint firstItem="dun-US-Iwq" firstAttribute="leading" secondItem="e0s-CK-LZX" secondAttribute="leading" constant="9" id="MeH-Uf-KeF"/>
+                            <constraint firstItem="dun-US-Iwq" firstAttribute="leading" secondItem="e0s-CK-LZX" secondAttribute="leading" constant="8" id="MeH-Uf-KeF"/>
                             <constraint firstItem="Y0S-w3-6SA" firstAttribute="top" secondItem="e0s-CK-LZX" secondAttribute="top" id="SEG-wE-UcT"/>
                             <constraint firstItem="kn0-L5-dEL" firstAttribute="leading" secondItem="ID9-Id-bO2" secondAttribute="trailing" constant="45" id="WPP-IT-LBz"/>
                             <constraint firstItem="e0s-CK-LZX" firstAttribute="bottom" secondItem="V4S-Wf-oxL" secondAttribute="bottom" id="WoR-qg-aOB"/>

@@ -89,7 +89,7 @@ class MailContentSingleViewController: UIViewController {
         MailSubject.text = self.mailsubject
         MailHeader.text = self.mailheader
         MailContent.attributedText = self.mailcontent.htmlAttributedString
-        MailContent.font = UIFont.systemFont(ofSize: 16.0)
+        MailContent.font = UIFont.systemFont(ofSize: 14.0)
     }
     
     @IBAction func mailcontentEdit(_ sender: Any) {

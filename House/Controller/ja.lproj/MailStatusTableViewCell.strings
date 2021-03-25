@@ -21,7 +21,7 @@
 "eMj-1L-NJz.text" = "Label";
 
 /* Class = "UILabel"; text = "MailSendBy :"; ObjectID = "m0B-nc-eEa"; */
-"m0B-nc-eEa.text" = "から送信されました :";
+"m0B-nc-eEa.text" = "から送信 :";
 
 /* Class = "UILabel"; text = "SendDateTime :"; ObjectID = "ovm-6B-IX5"; */
 "ovm-6B-IX5.text" = "送信日時 :";

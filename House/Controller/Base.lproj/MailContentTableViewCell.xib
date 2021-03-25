@@ -9,15 +9,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="175" id="KGk-i7-Jjw" customClass="MailContentTableViewCell" customModule="House" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="324" height="175"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="191" id="KGk-i7-Jjw" customClass="MailContentTableViewCell" customModule="House" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="326" height="191"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="324" height="175"/>
+                <rect key="frame" x="0.0" y="0.0" width="326" height="191"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jn1-AW-uwz">
-                        <rect key="frame" x="0.0" y="0.0" width="324" height="175"/>
+                        <rect key="frame" x="0.0" y="0.0" width="326" height="191"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjb-um-zFE">
                                 <rect key="frame" x="5" y="10" width="46" height="30"/>
@@ -44,24 +44,26 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwQ-8J-hqf">
-                                <rect key="frame" x="274" y="142" width="46" height="30"/>
+                                <rect key="frame" x="279" y="161" width="43" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkt-fu-tIs">
-                                <rect key="frame" x="274" y="142" width="46" height="30"/>
+                                <rect key="frame" x="279" y="161" width="43" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Button"/>
                             </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="Yeb-ft-Wla" firstAttribute="leading" secondItem="jn1-AW-uwz" secondAttribute="leading" constant="5" id="3Gf-7A-ZMy"/>
                             <constraint firstItem="pjb-um-zFE" firstAttribute="leading" secondItem="jn1-AW-uwz" secondAttribute="leading" constant="5" id="7Iy-Kl-ppa"/>
-                            <constraint firstAttribute="bottom" secondItem="fkt-fu-tIs" secondAttribute="bottom" constant="3" id="8E4-Ma-61L"/>
+                            <constraint firstAttribute="bottom" secondItem="fkt-fu-tIs" secondAttribute="bottom" constant="1" id="8E4-Ma-61L"/>
                             <constraint firstItem="pjb-um-zFE" firstAttribute="top" secondItem="jn1-AW-uwz" secondAttribute="top" constant="10" id="DoR-UQ-Nx8"/>
                             <constraint firstItem="dFr-ba-sNo" firstAttribute="top" secondItem="Yeb-ft-Wla" secondAttribute="bottom" constant="10" id="FcE-8p-d26"/>
                             <constraint firstAttribute="trailing" secondItem="fkt-fu-tIs" secondAttribute="trailing" constant="4" id="RYI-qH-h4w"/>
                             <constraint firstItem="dFr-ba-sNo" firstAttribute="leading" secondItem="jn1-AW-uwz" secondAttribute="leading" constant="5" id="Vtd-IK-9yO"/>
                             <constraint firstItem="Yeb-ft-Wla" firstAttribute="leading" secondItem="pjb-um-zFE" secondAttribute="leading" id="YKx-4C-6a4"/>
-                            <constraint firstAttribute="bottom" secondItem="xwQ-8J-hqf" secondAttribute="bottom" constant="3" id="cS2-AE-fM1"/>
+                            <constraint firstAttribute="bottom" secondItem="xwQ-8J-hqf" secondAttribute="bottom" constant="1" id="cS2-AE-fM1"/>
                             <constraint firstAttribute="trailing" secondItem="xwQ-8J-hqf" secondAttribute="trailing" constant="4" id="dvU-TF-uxq"/>
                             <constraint firstItem="Qot-bD-dhQ" firstAttribute="firstBaseline" secondItem="dFr-ba-sNo" secondAttribute="firstBaseline" id="edA-6Y-R8H"/>
                             <constraint firstItem="Qot-bD-dhQ" firstAttribute="leading" secondItem="dFr-ba-sNo" secondAttribute="trailing" constant="5" id="j6c-rB-azw"/>
@@ -85,7 +87,7 @@
                 <outlet property="mailcontentName" destination="Yeb-ft-Wla" id="87t-jD-Y36"/>
                 <outlet property="mailcontentSubject" destination="Qot-bD-dhQ" id="9YL-fm-Cfj"/>
             </connections>
-            <point key="canvasLocation" x="107.24637681159422" y="45.870535714285715"/>
+            <point key="canvasLocation" x="105.79710144927537" y="51.227678571428569"/>
         </tableViewCell>
     </objects>
 </document>
