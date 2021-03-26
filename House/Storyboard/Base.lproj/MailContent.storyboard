@@ -54,7 +54,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="JOd-5x-FXc" kind="show" id="KqK-LX-DZi"/>
+                                    <action selector="MailContentRegister:" destination="1oR-2W-QWu" eventType="touchUpInside" id="UBI-5L-dCa"/>
                                 </connections>
                             </button>
                             <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="kn0-L5-dEL">
@@ -193,6 +193,7 @@
                         <outletCollection property="sortingBtn" destination="CHE-NF-rdY" collectionClass="NSMutableArray" id="Vy0-pe-cch"/>
                         <outletCollection property="sortingBtn" destination="jCB-H4-dFd" collectionClass="NSMutableArray" id="Uww-NY-0Xm"/>
                         <segue destination="2bl-4A-MwG" kind="show" identifier="mailcontentSingleView" id="8VZ-GS-uuV"/>
+                        <segue destination="JOd-5x-FXc" kind="show" identifier="MailContentRegisterSegue" id="v7T-Ta-TZj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xDP-s5-q8r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

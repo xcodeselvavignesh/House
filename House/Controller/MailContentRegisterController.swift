@@ -7,6 +7,12 @@
 
 import UIKit
 import SideMenu
+protocol MailContentRegister {
+    func passDataBack(mcName: String,mcSubject: String,mcHeader: String,mcContent: String)
+}
+protocol MailContentReg {
+    func passDataReg()
+}
 class MailContentRegisterController: UIViewController {
     
     //API
@@ -25,6 +31,8 @@ class MailContentRegisterController: UIViewController {
     var mcSubject : String = ""
     var mcHeader : String = ""
     var mcContent : String = ""
+    var delegate: MailContentRegister?
+    var delegates: MailContentReg?
     override func viewDidLoad() {
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 20))
         imageView.contentMode = .scaleToFill
@@ -193,7 +201,9 @@ class MailContentRegisterController: UIViewController {
                 alertMessage = "Registered Successfully"
                 okClick = UIAlertAction(title: "Ok", style: .default) { (alert: UIAlertAction!) -> Void in
                     self.navigationController?.popViewController(animated: true)
-                                       self.navigationController?.viewControllers.forEach{ ($0 as? MailContentViewController)?.MailContentList.reloadData() }
+                    self.delegates?.passDataReg()
+                    self.navigationController?.popViewController(animated: true)
+                   
                 }
             }
             else {
@@ -216,6 +226,7 @@ class MailContentRegisterController: UIViewController {
             if(msg == 0) {
                 alertMessage = "Updated Successfully"
                 okClick = UIAlertAction(title: "Ok", style: .default) { (alert: UIAlertAction!) -> Void in
+                    self.delegate?.passDataBack(mcName: self.mailName.text!, mcSubject: self.mailSubject.text!, mcHeader: self.mailHeader.text!, mcContent: self.mailContent.text!)
                     self.navigationController?.popViewController(animated: true)
                 }
             }

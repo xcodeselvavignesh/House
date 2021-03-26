@@ -9,24 +9,33 @@ struct MailData {
 }
 
 
-class MailContentViewController: UIViewController,UITableViewDelegate,UITableViewDataSource, UIScrollViewDelegate {
+class MailContentViewController: UIViewController,UITableViewDelegate,UITableViewDataSource, UIScrollViewDelegate,MailContentSingleView,MailContentReg {
+    func passDataReg() {
+        dataJson.removeAll()
+        MailContentList.reloadData()
+        searching = false
+        searchBar.text = ""
+        self.dataOffset = 0
+        self.getMailList()
+    }
+    func passDataBacks() {
+        dataJson.removeAll()
+        MailContentList.reloadData()
+        searching = false
+        searchBar.text = ""
+        self.dataOffset = 0
+        self.getMailList()
+    }
+    
     // API Name
     let API = "MailContentAPI.php"
     @IBOutlet weak var MailContentList: UITableView!
-    
     @IBOutlet weak var searchBar: UISearchBar!
-    
     @IBOutlet weak var mailButton: UIButton!
-    
     @IBOutlet var filterButton: [UIButton]!
-    
     @IBOutlet weak var allBtn: UIButton!
-    
     @IBOutlet var sortingBtn: [UIButton]!
-    
-   
     @IBOutlet weak var stackview: UIStackView!
-    
     @IBOutlet weak var selectSortingBtn: UIButton!
     private var Flg = 0
     private var dataOffset = 0
@@ -41,6 +50,7 @@ class MailContentViewController: UIViewController,UITableViewDelegate,UITableVie
     var mailcontentMailid = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.MailContentList.reloadData()
         self.setTitleImage()
         self.MailContentList.showsVerticalScrollIndicator = false
         allBtn.setTitleColor(UIColor.gray, for: .normal)
@@ -375,17 +385,29 @@ class MailContentViewController: UIViewController,UITableViewDelegate,UITableVie
     }
     
     @objc func mailContentSingleView (sender: UIButton) {
+        
         self.id = (sender.titleLabel?.text)!
         performSegue(withIdentifier: "mailcontentSingleView", sender: self)
     }
-    
+    @IBAction func MailContentRegister(_ sender: Any) {
+        performSegue(withIdentifier: "MailContentRegisterSegue", sender: self)
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
         let id = self.id
         if segue.identifier == "mailcontentSingleView" {
             let vc = segue.destination as! MailContentSingleViewController
             vc.id = id
+            vc.delegate = self
+        }
+        if segue.identifier == "MailContentRegisterSegue" {
+            let vc = segue.destination as! MailContentRegisterController
+            vc.delegates = self
         }
     }
+    
+   
+
 }
 extension MailContentViewController:UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -400,3 +422,5 @@ extension MailContentViewController:UISearchBarDelegate {
         }
     }
 }
+
+

@@ -6,8 +6,17 @@
 //
 
 import UIKit
-
-class MailContentSingleViewController: UIViewController {
+protocol MailContentSingleView {
+    func passDataBacks()
+}
+class MailContentSingleViewController: UIViewController,MailContentRegister {
+    func passDataBack(mcName: String, mcSubject: String, mcHeader: String, mcContent: String) {
+        MailName.text = mcName
+        MailSubject.text = mcSubject
+        MailHeader.text = mcHeader
+        MailContent.text = mcContent
+    }
+    
     private let API = "MailContentAPI.php"
     
     @IBOutlet weak var mcView: UIView!
@@ -23,7 +32,12 @@ class MailContentSingleViewController: UIViewController {
     var mailsubject : String = ""
     var mailheader : String = ""
     var mailcontent : String = ""
+    var delegate: MailContentSingleView?
     override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationItem.setHidesBackButton(true, animated: true)
+        let backButton = UIBarButtonItem(title: "< Back", style: .plain, target: self, action: #selector (backButtonClick(sender:)))
+        navigationItem.setLeftBarButton(backButton, animated: false)
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 20))
         imageView.contentMode = .scaleToFill
         let image = UIImage(named: "Microbit_logo-40")
@@ -43,8 +57,13 @@ class MailContentSingleViewController: UIViewController {
         editButton.setImage(imagecolor, for: .normal)
         editButton.imageView?.contentMode = .scaleAspectFit
         editButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -5, bottom: 0, right: 0)
+        
     }
-    
+    @objc func backButtonClick(sender : UIButton) {
+        self.delegate?.passDataBacks()
+        self.navigationController?.popViewController(animated: true)
+        
+    }
     func getMailContentSingleViewData() {
         let jsonParam: [String: Any] = ["ProcessName": "mailcontentSingleView","id": id]
         Common.sharedInstance.RequestFromApi( api: self.API, jsonParams: jsonParam, completionHandler: {(result) -> Void in
@@ -100,6 +119,7 @@ class MailContentSingleViewController: UIViewController {
         if segue.identifier == "MailContentRegisterSegue" {
             let vc = segue.destination as! MailContentRegisterController
             vc.id = id
+            vc.delegate = self
         }
     }
 }
@@ -117,4 +137,5 @@ extension String {
         return htmlAttributedString?.string ?? ""
     }
 }
+
 
