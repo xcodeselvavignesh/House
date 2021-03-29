@@ -62,7 +62,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dun-US-Iwq">
-                                <rect key="frame" x="8" y="175" width="165" height="34"/>
+                                <rect key="frame" x="8" y="175" width="213" height="34"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWn-5G-gs3">
                                         <rect key="frame" x="-1" y="3" width="29" height="29"/>
@@ -162,7 +162,7 @@
                             <constraint firstItem="kn0-L5-dEL" firstAttribute="top" secondItem="Y0S-w3-6SA" secondAttribute="bottom" constant="1" id="41Y-hk-Tr5"/>
                             <constraint firstItem="V4S-Wf-oxL" firstAttribute="top" secondItem="dun-US-Iwq" secondAttribute="bottom" constant="15" id="9wY-xz-Bvc"/>
                             <constraint firstItem="ID9-Id-bO2" firstAttribute="leading" secondItem="e0s-CK-LZX" secondAttribute="leading" constant="13" id="DM0-96-VMQ"/>
-                            <constraint firstItem="RyE-dt-LSX" firstAttribute="leading" secondItem="dun-US-Iwq" secondAttribute="trailing" constant="108" id="G0X-0p-rIt"/>
+                            <constraint firstItem="RyE-dt-LSX" firstAttribute="leading" secondItem="dun-US-Iwq" secondAttribute="trailing" constant="60" id="G0X-0p-rIt"/>
                             <constraint firstItem="RyE-dt-LSX" firstAttribute="top" secondItem="kn0-L5-dEL" secondAttribute="bottom" constant="4" id="GMs-2v-dxs"/>
                             <constraint firstItem="dun-US-Iwq" firstAttribute="leading" secondItem="e0s-CK-LZX" secondAttribute="leading" constant="8" id="MeH-Uf-KeF"/>
                             <constraint firstItem="Y0S-w3-6SA" firstAttribute="top" secondItem="e0s-CK-LZX" secondAttribute="top" id="SEG-wE-UcT"/>

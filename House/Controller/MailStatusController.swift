@@ -58,7 +58,7 @@ class MailStatusController: UIViewController {
                 }
                 for index in sortedIndex.sorted() {
                     dict = result[index] as! [String: Any]
-                    let username = dict["createdBy"] as? String
+                    let username = dict["lastName"] as? String
                     self.msUserName.append(username!)
                     let to = dict["toMail"] as? String
                     self.msMail.append(to!)

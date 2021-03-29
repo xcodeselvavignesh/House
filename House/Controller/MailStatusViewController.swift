@@ -49,7 +49,7 @@ class MailStatusViewController: UIViewController,UITableViewDelegate,UITableView
                     let id = dict["id"] as? String
                     self.id.append(id!)
                     
-                    let username = dict["createdBy"] as? String
+                    let username = dict["lastName"] as? String
                     self.mailstsuserName.append(username!)
                     
                     let email = dict["toMail"] as? String

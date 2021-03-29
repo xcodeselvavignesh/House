@@ -18,7 +18,7 @@
 "kdS-uH-2Bl.text" = "|";
 
 /* Class = "UISearchBar"; placeholder = "MailId (or) MailName"; ObjectID = "kn0-L5-dEL"; */
-"kn0-L5-dEL.placeholder" = "Search";
+"kn0-L5-dEL.placeholder" = "検索";
 
 /* Class = "UILabel"; text = "Mail Content"; ObjectID = "rVU-47-2t0"; */
 "rVU-47-2t0.text" = "メール登録内容一覧";
