@@ -1,7 +1,19 @@
 import UIKit
 
-class SingleUserViewController: UIViewController {
-    
+class SingleUserViewController: UIViewController,redirectProfile{
+   
+    func redirectEditPage(fName: String, lName: String, mail: String, usrMobileNo: String, userGender: Int, userDob: String) {
+        firstName.text = fName
+        lastName.text = lName
+        email.text = mail
+        mobileNo.text = usrMobileNo
+        if userGender == 1 {
+            gender.text = "Male"
+        } else {
+            gender.text = "Female"
+        }
+        dob.text = userDob
+    }
     private let API = "UserAPI.php"
     @IBOutlet weak var userId: UILabel!
     @IBOutlet weak var lastName: UILabel!
@@ -120,6 +132,7 @@ class SingleUserViewController: UIViewController {
         if segue.identifier == "GoEditPage" {
             let vc = segue.destination as! RegisterViewController
             vc.id = UserDefaults.standard.string(forKey: "UserID")!
+            vc.delegate = self
         }
     }
    

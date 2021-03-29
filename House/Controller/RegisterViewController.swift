@@ -1,5 +1,7 @@
 import UIKit
-
+protocol redirectProfile {
+    func redirectEditPage(fName: String,lName : String,mail : String,usrMobileNo : String,userGender : Int,userDob : String)
+}
 class RegisterViewController: UIViewController {
     
     //API
@@ -26,23 +28,27 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var LblMobileNo: UILabel!
     @IBOutlet weak var LblUsrId: UILabel!
     @IBOutlet weak var LblUserId: UILabel!
-    @IBOutlet weak var LblUsrIdMantadorySymbol: UILabel!
     @IBOutlet weak var LblSurName: UILabel!
     @IBOutlet weak var EditView: UIView!
     @IBOutlet weak var LblSurNameMandatorySymbol: UILabel!
     //Variables
+    
+    private var Lbl_UserId = NSLocalizedString("Lbl_UserId", comment: "")
     private  var gender = 1
     var id : String = ""
-    var userId : String = ""
-    var fName : String = ""
-    var lName : String = ""
-    var email : String = ""
-    var mobileNo : String = ""
-    var genderFlg = 1
-    var dob : String = ""
-    private var Lbl_UserId = NSLocalizedString("Lbl_UserId", comment: "")
-   
-    
+    private var userId : String = ""
+    private var fName : String = ""
+    private var lName : String = ""
+    private var email : String = ""
+    private var mobileNo : String = ""
+    private var genderFlg = 1
+    private var dob : String = ""
+    private var mail : String = ""
+    private var usrMobileNo : String = ""
+    private var userDob : String = ""
+    private var userGender = 1
+    var delegate: redirectProfile?
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         EditView.layer.borderWidth = 3
@@ -51,33 +57,28 @@ class RegisterViewController: UIViewController {
             self.getUserData()
             
             LblPassword.isHidden = true
-            
             LblPWDMantadorySymbol.isHidden = true
-            
             TxtPassword.isHidden = true
-            
             LblConfirmPassword.isHidden = true
-            
             TxtConfirmPassword.isHidden = true
-            
             LblConfirmPwdMantadorySymbol.isHidden = true
-            
             LblMobileNo.topAnchor.constraint(equalTo: LblPassword.topAnchor).isActive = true
-            
-         //   EditView.heightAnchor.constraint(equalToConstant: CGFloat(300)).isActive = true
-            
             LblMobileNoMandatory.topAnchor.constraint(equalTo: LblPWDMantadorySymbol.topAnchor).isActive = true
-            
             
             LblPageTitle?.text = NSLocalizedString("Lbl_Profile_Edit", comment: "")
             Btn_Regiter.backgroundColor = UIColor.orange
         } else {
             
             LblUsrId.isHidden = true
-            
             LblUserId.isHidden = true
-           
-            LblSurName.topAnchor.constraint(equalTo: LblUsrId.topAnchor).isActive = true
+            
+        //LblUsrId.heightAnchor.constraint(equalToConstant: CGFloat(0)).isActive = true
+          // LblSurName.topAnchor.constraint(equalTo: LblUsrId.bottomAnchor, constant: CGFloat(0)).isActive = true
+            //LblSurNameMandatorySymbol.topAnchor.constraint(equalTo: EditView.topAnchor, constant: CGFloat(15)).isActive = true
+            //TxtSurName.setContentCompressionResistancePriority(UILayoutPriority.defaultLow, for: .vertical)
+            //xtSurName.setContentHuggingPriority(UILayoutPriority.defaultHigh, for: .vertical)
+            //LblUserId.setContentCompressionResistancePriority(UILayoutPriority.defaultHigh, for: .vertical)
+            //LblSurNameMandatorySymbol.topAnchor.constraint(equalTo: LblUsrId.topAnchor).isActive = true
         }
         LblUsrId?.text = Lbl_UserId
         self.setInitialProperties()
@@ -212,11 +213,7 @@ class RegisterViewController: UIViewController {
             let okClick = UIAlertAction(title: "Yes", style: .default, handler: { (alert) -> Void in
                 self.updateProcess()
             })
-            let cancelClick = UIAlertAction(title: "No", style: .cancel, handler: { (alert) -> Void in
-                self.updateProcess()
-            })
             confirmationDialog.addAction(okClick)
-            confirmationDialog.addAction(cancelClick)
             DispatchQueue.main.async {
                 self.present(confirmationDialog, animated: true, completion: nil)
             }
@@ -337,6 +334,10 @@ class RegisterViewController: UIViewController {
             if(msg == 0) {
                 alertMessage = "Update succesfully"
                 okClick = UIAlertAction(title: "Ok", style: .default) { (alert: UIAlertAction!) -> Void in
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "yyyy-MM-dd'"
+                    let date =  dateFormatter.string(from: self.datePicker.date)
+                    self.delegate?.redirectEditPage(fName: self.TxtSurName.text!, lName: self.TxtGivenName.text!, mail: self.TxtEmailId.text!, usrMobileNo: self.TxtMobileNo.text!, userGender: self.gender,userDob:date)
                     self.navigationController?.popViewController(animated: true)
                 }
             }
