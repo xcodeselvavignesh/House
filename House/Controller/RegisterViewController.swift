@@ -213,7 +213,9 @@ class RegisterViewController: UIViewController {
             let okClick = UIAlertAction(title: "Yes", style: .default, handler: { (alert) -> Void in
                 self.updateProcess()
             })
+            let cancelClick = UIAlertAction(title: "No", style: .cancel, handler: nil)
             confirmationDialog.addAction(okClick)
+            confirmationDialog.addAction(cancelClick)
             DispatchQueue.main.async {
                 self.present(confirmationDialog, animated: true, completion: nil)
             }
