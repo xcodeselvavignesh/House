@@ -67,18 +67,13 @@ class RegisterViewController: UIViewController {
             
             LblPageTitle?.text = NSLocalizedString("Lbl_Profile_Edit", comment: "")
             Btn_Regiter.backgroundColor = UIColor.orange
+            
         } else {
             
             LblUsrId.isHidden = true
             LblUserId.isHidden = true
+            LblSurName.topAnchor.constraint(equalTo: LblUsrId.topAnchor, constant: CGFloat(10)).isActive = true
             
-        //LblUsrId.heightAnchor.constraint(equalToConstant: CGFloat(0)).isActive = true
-          // LblSurName.topAnchor.constraint(equalTo: LblUsrId.bottomAnchor, constant: CGFloat(0)).isActive = true
-            //LblSurNameMandatorySymbol.topAnchor.constraint(equalTo: EditView.topAnchor, constant: CGFloat(15)).isActive = true
-            //TxtSurName.setContentCompressionResistancePriority(UILayoutPriority.defaultLow, for: .vertical)
-            //xtSurName.setContentHuggingPriority(UILayoutPriority.defaultHigh, for: .vertical)
-            //LblUserId.setContentCompressionResistancePriority(UILayoutPriority.defaultHigh, for: .vertical)
-            //LblSurNameMandatorySymbol.topAnchor.constraint(equalTo: LblUsrId.topAnchor).isActive = true
         }
         LblUsrId?.text = Lbl_UserId
         self.setInitialProperties()
