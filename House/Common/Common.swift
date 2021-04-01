@@ -125,16 +125,16 @@ class Common {
         txtField.layer.cornerRadius = 5
         if(flg == 2) {
             txtField.text = ""
-            txtField.placeholder = "Confirm Password DoesNot Match"
+            txtField.placeholder = "C.Pwd DoesNot Match"
         } else if(flg == 3) {
             txtField.text = ""
             txtField.placeholder = "Invalid Email"
         } else if(flg == 4) {
             txtField.text = ""
-            txtField.placeholder = "Mobile Number below 12 Digit"
+            txtField.placeholder = "Mobile No below 12 Digit"
         } else if(flg == 5) {
             txtField.text = ""
-            txtField.placeholder = "Mobile Number should 10 Digit"
+            txtField.placeholder = "Mobile No should 10 Digit"
         } else {
             txtField.placeholder = "The Field is Required"
         }
