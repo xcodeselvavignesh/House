@@ -2,7 +2,7 @@ import UIKit
 protocol redirectProfile {
     func redirectEditPage(fName: String,lName : String,mail : String,usrMobileNo : String,userGender : Int,userDob : String)
 }
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     //API
     let API = "UserAPI.php"
@@ -48,9 +48,15 @@ class RegisterViewController: UIViewController {
     private var userDob : String = ""
     private var userGender = 1
     var delegate: redirectProfile?
-        
     override func viewDidLoad() {
         super.viewDidLoad()
+        TxtMobileNo.delegate = self
+        TxtSurName.delegate = self
+        TxtGivenName.delegate = self
+        TxtEmailId.delegate = self
+        TxtPassword.delegate = self
+        TxtConfirmPassword.delegate = self
+        TxtEmailId.delegate = self
         EditView.layer.borderWidth = 3
         EditView.layer.borderColor = UIColor.gray.cgColor
         if id != "" {
@@ -81,7 +87,7 @@ class RegisterViewController: UIViewController {
         self.datePicker.maximumDate = Calendar.current.date(byAdding: .year, value: -18, to: Date()) ?? Date()
         self.datePicker.minimumDate = Calendar.current.date(byAdding: .year, value: -50, to: Date()) ?? Date()
     }
-    
+
     func getUserData() {
         let jsonParam: [String: Any] = ["ProcessName": "userSingleView","id": id]
         Common.sharedInstance.RequestFromApi( api: self.API, jsonParams: jsonParam, completionHandler: {(result) -> Void in
@@ -358,5 +364,29 @@ class RegisterViewController: UIViewController {
             performSegue(withIdentifier: "GoLoginPage", sender: self)
         }
         
+    }
+    
+    //Input Only Numbers for Mobileno and Max length set in all fields
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if (textField == TxtMobileNo) {
+            let maxLength = 15
+            if range.location > maxLength - 1 {
+                textField.text?.removeLast()
+            }
+            let allowedCharacters = CharacterSet(charactersIn:"+0123456789")
+            let characterSet = CharacterSet(charactersIn: string)
+            return allowedCharacters.isSuperset(of: characterSet)
+        }
+        else if (textField == TxtSurName || textField == TxtGivenName) {
+            guard let text = textField.text else { return true }
+            let newLength = text.count + string.count - range.length
+            return newLength <= 50
+        }
+        else if (textField == TxtEmailId || textField == TxtPassword || textField == TxtConfirmPassword) {
+            guard let text = textField.text else { return true }
+            let newLength = text.count + string.count - range.length
+            return newLength <= 30
+        }
+        return true
     }
 }

@@ -1,6 +1,6 @@
 import UIKit
 
-class ChangePasswordViewController: UIViewController {
+class ChangePasswordViewController: UIViewController, UITextFieldDelegate {
     
     private let API = "HomeAPI.php"
 
@@ -10,6 +10,9 @@ class ChangePasswordViewController: UIViewController {
     @IBOutlet weak var Lbl_Error: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        Txt_CurrentPassword.delegate = self
+        Txt_NewPassword.delegate = self
+        Txt_ConfirmPassword.delegate = self
         self.setTitleImage()
     }
     
@@ -124,5 +127,14 @@ class ChangePasswordViewController: UIViewController {
                 self.Txt_ConfirmPassword.isSecureTextEntry = true
             }
         }
+    }
+    //Max length set in all fields
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if (textField == Txt_NewPassword || textField == Txt_CurrentPassword || textField == Txt_ConfirmPassword) {
+            guard let text = textField.text else { return true }
+            let newLength = text.count + string.count - range.length
+            return newLength <= 30
+        }
+        return true
     }
 }

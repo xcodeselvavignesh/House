@@ -13,7 +13,7 @@ protocol MailContentRegister {
 protocol MailContentReg {
     func passDataReg()
 }
-class MailContentRegisterController: UIViewController {
+class MailContentRegisterController: UIViewController,UITextFieldDelegate, UITextViewDelegate {
     
     //API
     let API = "MailContentAPI.php"
@@ -34,6 +34,10 @@ class MailContentRegisterController: UIViewController {
     var delegate: MailContentRegister?
     var delegates: MailContentReg?
     override func viewDidLoad() {
+        mailName.delegate = self
+        mailSubject.delegate = self
+        mailHeader.delegate = self
+        mailContent.delegate = self
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 20))
         imageView.contentMode = .scaleToFill
         let image = UIImage(named: "Microbit_logo-40")
@@ -244,6 +248,24 @@ class MailContentRegisterController: UIViewController {
 
     @IBAction func cancelProcess(_ sender: Any) {
        self.navigationController?.popViewController(animated: true)
+    }
+    //Max length set in all Text fields
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if (textField == mailName || textField == mailSubject || textField == mailHeader) {
+            guard let text = textField.text else { return true }
+            let newLength = text.count + string.count - range.length
+            return newLength <= 50
+        }
+        return true
+    }
+    //Max length set in all Text View
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if (textView == mailContent) {
+            let newText = (textView.text as NSString).replacingCharacters(in: range, with: text)
+            let numberofChars = newText.count
+            return numberofChars <= 300
+        }
+        return true
     }
     /*
     // MARK: - Navigation

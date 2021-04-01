@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     // API Name
     let API = "HomeAPI.php"
@@ -24,6 +24,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        TxtUserId.delegate = self
+        TxtPassword.delegate = self
         self.startImageTimer()
         self.setInitialProperties()
         self.TxtUserId.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
@@ -103,7 +105,15 @@ class ViewController: UIViewController {
             }
         }
     }
-    
+    //Max length set in all fields
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if (textField == TxtUserId || textField == TxtPassword) {
+            guard let text = textField.text else { return true }
+            let newLength = text.count + string.count - range.length
+            return newLength <= 30
+        }
+        return true
+    }
     func loginProcess(_ userId: String, _ password: String) {
         let jsonParam: [String: Any] = ["ProcessName": "Login", "userId": self.TxtUserId.text!, "password": self.TxtPassword.text!]
         Common.sharedInstance.RequestFromApi(api: self.API, jsonParams: jsonParam, completionHandler: {(result) -> Void in

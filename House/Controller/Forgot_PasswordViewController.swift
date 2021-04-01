@@ -1,6 +1,6 @@
 import UIKit
 
-class Forgot_PasswordViewController: UIViewController {
+class Forgot_PasswordViewController: UIViewController, UITextFieldDelegate {
     
     private let API = "HomeAPI.php"
     
@@ -14,6 +14,7 @@ class Forgot_PasswordViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        Txt_Email.delegate = self
         self.setInitialProperties()
     }
     
@@ -50,7 +51,15 @@ class Forgot_PasswordViewController: UIViewController {
         }
         return valid
     }
-    
+    //Max length set in all fields
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if (textField == Txt_Email) {
+            guard let text = textField.text else { return true }
+            let newLength = text.count + string.count - range.length
+            return newLength <= 30
+        }
+        return true
+    }
     private func resetPassword() {
         let requestURL = URL(string: self.API)
         let request = NSMutableURLRequest(url: requestURL!)
