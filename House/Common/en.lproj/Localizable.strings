@@ -33,3 +33,6 @@
 "Lbl_Use" = "Use";
 "Lbl_NotUse" = "Notuse";
 "Lbl_UseNotuseconfirmmessage" = "Do You Want To Change Flg?";
+"Lbl_Yesmessage" = "Yes";
+"Lbl_Nomessage" = "No";
+"Lbl_ChangePasswordconfirmmessage" = "Are you sure, you want to change the password?";

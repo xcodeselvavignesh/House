@@ -151,10 +151,10 @@ class MailContentRegisterController: UIViewController,UITextFieldDelegate, UITex
         }
         if id != "" {
             let confirmationDialog = Common.DialogResult(title: "Confirmation", message: NSLocalizedString("Lbl_Updateconfirmmessage", comment: ""))
-            let okClick = UIAlertAction(title: "Yes", style: .default, handler: { (alert) -> Void in
+            let cancelClick = UIAlertAction(title: NSLocalizedString("Lbl_Nomessage", comment: ""), style: .cancel, handler: nil)
+            let okClick = UIAlertAction(title: NSLocalizedString("Lbl_Yesmessage", comment: ""), style: .default, handler: { (alert) -> Void in
                 self.mailcontenteditProcess()
             })
-            let cancelClick = UIAlertAction(title: "No", style: .cancel, handler: nil)
             confirmationDialog.addAction(okClick)
             confirmationDialog.addAction(cancelClick)
             DispatchQueue.main.async {
@@ -162,10 +162,10 @@ class MailContentRegisterController: UIViewController,UITextFieldDelegate, UITex
             }
         } else {
             let confirmationDialog = Common.DialogResult(title: "Confirmation", message: NSLocalizedString("Lbl_Registerconfirmmessage", comment: ""))
-            let okClick = UIAlertAction(title: "Yes", style: .default, handler: { (alert) -> Void in
+            let okClick = UIAlertAction(title: NSLocalizedString("Lbl_Yesmessage", comment: ""), style: .default, handler: { (alert) -> Void in
                 self.mailcontentregProcess()
             })
-            let cancelClick = UIAlertAction(title: "No", style: .cancel, handler: nil)
+            let cancelClick = UIAlertAction(title: NSLocalizedString("Lbl_Nomessage", comment: ""), style: .cancel, handler: nil)
             confirmationDialog.addAction(okClick)
             confirmationDialog.addAction(cancelClick)
             DispatchQueue.main.async {

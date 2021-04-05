@@ -211,10 +211,10 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         }
         if id != "" {
             let confirmationDialog = Common.DialogResult(title: "Confirmation", message: NSLocalizedString("Lbl_Updateconfirmmessage", comment: ""))
-            let okClick = UIAlertAction(title: "Yes", style: .default, handler: { (alert) -> Void in
+            let cancelClick = UIAlertAction(title: NSLocalizedString("Lbl_Nomessage", comment: ""), style: .cancel, handler: nil)
+            let okClick = UIAlertAction(title: NSLocalizedString("Lbl_Yesmessage", comment: ""), style: .default, handler: { (alert) -> Void in
                 self.updateProcess()
             })
-            let cancelClick = UIAlertAction(title: "No", style: .cancel, handler: nil)
             confirmationDialog.addAction(okClick)
             confirmationDialog.addAction(cancelClick)
             DispatchQueue.main.async {
@@ -222,10 +222,10 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             }
         } else {
             let confirmationDialog = Common.DialogResult(title: "Confirmation", message: NSLocalizedString("Lbl_Registerconfirmmessage", comment: ""))
-            let okClick = UIAlertAction(title: "Yes", style: .default, handler: { (alert) -> Void in
+            let okClick = UIAlertAction(title: NSLocalizedString("Lbl_Yesmessage", comment: ""), style: .default, handler: { (alert) -> Void in
                 self.regProcess()
             })
-            let cancelClick = UIAlertAction(title: "No", style: .cancel, handler: nil)
+            let cancelClick = UIAlertAction(title: NSLocalizedString("Lbl_Nomessage", comment: ""), style: .cancel, handler: nil)
             confirmationDialog.addAction(okClick)
             confirmationDialog.addAction(cancelClick)
             DispatchQueue.main.async {

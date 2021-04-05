@@ -34,3 +34,6 @@
 "Lbl_Use" = "利用";
 "Lbl_NotUse" = "未使用";
 "Lbl_UseNotuseconfirmmessage" = "Do You Want To Change Flg?";
+"Lbl_Yesmessage" = "はい";
+"Lbl_Nomessage" = "いいえ";
+"Lbl_ChangePasswordconfirmmessage" = "パスワードを変更しますか？";
